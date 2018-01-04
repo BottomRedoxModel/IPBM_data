@@ -1,21 +1,56 @@
 initialization:
-  fabm_yaml_name: fabm-ersem-15.06-L4-noben-docdyn-iop.yaml
-  input_file name: KaraSea.nc # a file to read input data
-  initialization_since_year: 1970 # a year specified in input file
-  depth_on_boundary:
-  time:
-  temperature:
-  salinity:
-  density:
-  eddy_diffusivity:
-  ice_thickness:
-  snow_thickness:
-  ice_surface_temperature:
-  longitude: 77.8
-  latitude: 77.3
+  fabm_yaml_name: fabm-ersem-15.06-L4-noben-nolight.yaml
+  input_file_name: ROMS_Laptev_Sea.nc
+  initialization_since_year: 1948
+  longitude: 74.00
+  latitude: 74.00
+  #---------------------------------------------------------------------------
+  depth_on_boundary: depth2
+  time: time
+  temperature: temp
+  salinity: sal
+  density: rho
+  eddy_diffusivity: Kz_s
+  ice_thickness: hice
+  snow_thickness: snow_thick
+  ice_surface_temperature: tisrf
+  #---------------------------------------------------------------------------
   width_bbl: 0.5
   resolution_bbl: 0.1
   width_sediments: 0.1
   resolution_sediments: 0.02
   ice_layers_resolution: 0.06
+  #-------------Boundary-conditions-------------------------------------------
+  #-------------TheNameOfParameter: InstancesName_InitializationName-or-none--
+  Alk: none
+  DIC: O3_c
+  PO4: N1_p
+  NO3: N3_n
+  Si: N5_s
+  #-------------IPBM-needs-to-know-for-bioturbation-calculations--------------
+  O2: O2_o
+  #-------------Solid-elements------------------------------------------------
+  CaCO3: L2_c
+  #-------------Solid-elements-from-BROM--------------------------------------
+  S0: none
+  Fe3: none
+  FeCO3: none
+  FeS: none
+  FeS2: none
+  Mn4: none
+  MnCO3: none
+  MnS: none
+  Sipart: none
+  Phy: none
+  PON: none
+  #-------------Solid-elements-from-ERSEM-------------------------------------
+  #-------------TheNameOfParameter: InstancesName-or-none---------------------
+  SmallPOM: R4
+  MediumPOM: R6
+  LargePOM: R8
+  Diatoms: P1
+  NanoPhy: P2
+  PicoPhy: P3
+  MicroPhy: P4
+
 
