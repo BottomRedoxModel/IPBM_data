@@ -1,0 +1,57 @@
+initialization:
+  fabm_yaml_name: north_fabm_brom_ersem.yaml
+  input_file_name: North_sea_36.nc
+  initialization_since_year: 2015
+  longitude: 6.63
+  latitude: 54.29
+  #---------------------------------------------------------------------------
+  depth_on_boundary: levelface
+  time: time
+  temperature: temperature
+  salinity: salinity
+  density: sigma
+  eddy_diffusivity: turbulence
+  ice_thickness: hice
+  snow_thickness: snowthick
+  ice_surface_temperature: icesurft
+  shortwave_radiation: par
+  #---------------------------------------------------------------------------
+  width_bbl: 0.5
+  resolution_bbl: 0.1
+  width_sediments: 0.1
+  resolution_sediments: 0.02
+  ice_layers_resolution: 0.06
+  #-------------Boundary-conditions-------------------------------------------
+  #-------------TheNameOfParameter: InstancesName_InitializationName-or-none--
+  Alk: B_C_Alk
+  DIC: B_C_DIC
+  PO4: N1_p
+  NO3: N3_n
+  Si: N5_s
+  #-------------IPBM-needs-to-know-for-bioturbation-calculations--------------
+  O2: O2_o
+  #-------------Solid-elements------------------------------------------------
+  CaCO3: B_Ca_CaCO3
+  #-------------Solid-elements-from-BROM--------------------------------------
+  S0: none
+  Fe3: none
+  FeCO3: none
+  FeS: none
+  FeS2: none
+  Mn4: none
+  MnCO3: none
+  MnS: none
+  Sipart: none
+  Phy: none
+  PON: none
+  #-------------Solid-elements-from-ERSEM-------------------------------------
+  #-------------TheNameOfParameter: InstancesName-or-none---------------------
+  SmallPOM: R4
+  MediumPOM: R6
+  LargePOM: R8
+  Diatoms: P1
+  NanoPhy: P2
+  PicoPhy: P3
+  MicroPhy: P4
+
+
