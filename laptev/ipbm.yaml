@@ -1,5 +1,5 @@
 initialization:
-  fabm_yaml_name: fabm_maecs.yaml
+  fabm_yaml_name: fabm_ersem.yaml
   input_file_name: ROMS_Laptev_Sea.nc
   initialization_since_year: 1948
   longitude: 74.00
@@ -14,6 +14,7 @@ initialization:
   ice_thickness: hice
   snow_thickness: snow_thick
   ice_surface_temperature: tisrf
+  shortwave_radiation: swrad # it must be par
   #---------------------------------------------------------------------------
   width_bbl: 0.5
   resolution_bbl: 0.1
@@ -24,13 +25,13 @@ initialization:
   #-------------TheNameOfParameter: InstancesName_InitializationName-or-none--
   Alk: none
   DIC: none
-  PO4: hzg_maecs_nutP
-  NO3: hzg_maecs_nutN
-  Si: none
+  PO4: N1_p
+  NO3: N3_n
+  Si: N5_s
   #-------------IPBM-needs-to-know-for-bioturbation-calculations--------------
-  O2: hzg_maecs_oxy
+  O2: O2_o
   #-------------Solid-elements------------------------------------------------
-  CaCO3: none
+  CaCO3: L2_c
   #-------------Solid-elements-from-BROM--------------------------------------
   S0: none
   Fe3: none
@@ -45,12 +46,12 @@ initialization:
   PON: none
   #-------------Solid-elements-from-ERSEM-------------------------------------
   #-------------TheNameOfParameter: InstancesName-or-none---------------------
-  SmallPOM: none
-  MediumPOM: none
-  LargePOM: none
-  Diatoms: none
-  NanoPhy: none
-  PicoPhy: none
-  MicroPhy: none
+  SmallPOM: R4
+  MediumPOM: R6
+  LargePOM: R8
+  Diatoms: P1
+  NanoPhy: P2
+  PicoPhy: P3
+  MicroPhy: P4
 
 

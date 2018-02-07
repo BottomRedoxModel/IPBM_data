@@ -1,5 +1,5 @@
 initialization:
-  fabm_yaml_name: north_fabm_brom_ersem.yaml
+  fabm_yaml_name: fabm_ersem.yaml
   input_file_name: North_sea_36.nc
   initialization_since_year: 2015
   longitude: 6.63
@@ -14,7 +14,7 @@ initialization:
   ice_thickness: hice
   snow_thickness: snowthick
   ice_surface_temperature: icesurft
-  shortwave_radiation: par
+  shortwave_radiation: par # it must be PAR
   #---------------------------------------------------------------------------
   width_bbl: 0.5
   resolution_bbl: 0.1
@@ -23,15 +23,15 @@ initialization:
   ice_layers_resolution: 0.06
   #-------------Boundary-conditions-------------------------------------------
   #-------------TheNameOfParameter: InstancesName_InitializationName-or-none--
-  Alk: B_C_Alk
-  DIC: B_C_DIC
+  Alk: none
+  DIC: none
   PO4: N1_p
   NO3: N3_n
   Si: N5_s
   #-------------IPBM-needs-to-know-for-bioturbation-calculations--------------
   O2: O2_o
   #-------------Solid-elements------------------------------------------------
-  CaCO3: B_Ca_CaCO3
+  CaCO3: L2_c
   #-------------Solid-elements-from-BROM--------------------------------------
   S0: none
   Fe3: none

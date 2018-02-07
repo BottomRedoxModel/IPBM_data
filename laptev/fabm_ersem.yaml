@@ -48,52 +48,32 @@ instances:
       ISWO2: 2                                            # saturation formulation (1: legacy ERSEM, 2: Weiss 1970)
     initialization:
       o: 300.0                                            # oxygen (mmol O_2/m^3)
-  B_EQ:
-    long_name: equilibrium_constrants
-    model: niva/brom_eq_constants
-  B_C:
-    long_name: carbon
-    model: niva/brom_carbon
-    initialization:
-      DIC: 2100.0 # total dissolved inorganic carbon (mmol C/m^3)
-      Alk: 2200.0 # umol/kg
-    coupling:
-      Kc0:   B_EQ/Kc0
-      Kc1:   B_EQ/Kc1
-      Kc2:   B_EQ/Kc2
-      Hplus: B_pH/Hplus
-  B_pH:
-    long_name: pH
-    model: niva/brom_pH
-    coupling:
-      Kc1:      B_EQ/Kc1
-      Kc2:      B_EQ/Kc2
-      Kb:       B_EQ/Kb
-      Kp1:      B_EQ/Kp1
-      Kp2:      B_EQ/Kp2
-      Kp3:      B_EQ/Kp3
-      KSi:      B_EQ/KSi
-      Knh4:     B_EQ/Knh4
-      Kh2s:     B_EQ/Kh2s
-      kso4:     B_EQ/kso4
-      kflu:     B_EQ/kflu
-      Kw:       B_EQ/Kw
-      tot_free: B_EQ/tot_free
-      DIC:      B_C/DIC
-      PO4:      N1/p
-      Si:       N5/s
-      NH4:      N4/n
-  B_Ca:
-    long_name: calcium
-    model: niva/brom_calcium
-    initialization:
-      CaCO3: 1.0
-    coupling:
-      DIC: B_C/DIC
-      CO3: B_C/CO3
+  O3:
+    long_name: carbonate
+    model: ersem/carbonate
     parameters:
-      K_caco3_diss: 3.0      #! CaCO3 dissollution rate constant (1/d) (wide ranges are given in (Luff et al., 2001))
-      K_caco3_form: 0.0002   #! CaCO3 precipitation rate constant (1/d) (wide ranges are given in (Luff et al., 2001))
+      iswCO2: 1                                           # carbonate system diagnostics (0: off, 1: on), default = 1
+      iswASFLUX: 1                                        # air-sea CO2 exchange (0: none, 1: Nightingale and Liss, 2: Wanninkhof 1992 without chemical enhancement, 3: Wanninkhof 1992 with chemical enhancement, 4: Wanninkhof 1999), default = 1
+      iswtalk: 5                                          # alkalinity formulation (1-4: from salinity and temperature, 5: dynamic alkalinity), default = 5
+    initialization:
+      c: 2130.0                                           # total dissolved inorganic carbon (mmol C/m^3)
+  L2:
+    long_name: calcite
+    model: ersem/calcification
+    parameters:
+      iswcal: 1                                           # calcification/dissolution dependence on calcite saturation (1: power law, 2: hyperbolic)
+      ncalc: 0.81                                         # power of the calcification law (Ridgwell et al. 2007, mineral calcite) (-)
+      ndiss: 2.22                                         # power of the dissolution law (Keir 1980) (-)
+      Rain0: 0.6                                          # maximum rain ratio from PISCES (-)
+      sedL2: 10.0                                         # sinking velocity (m/d)
+      sL2O3: 0.03                                         # maximum specific dissolution rate (1/d), default = 1.0
+      c0: 1e-05                                           # background concentration (mg C/m^3), default = 0.0
+      ndeposition: 0                                      # number of target pools for sedimentation, default = 1
+    initialization:
+      c: 0.05                                             # carbon (mg C/m^3)
+    coupling:
+      om_cal: O3/Om_cal                                   # calcite saturation (-)
+      O3c: O3/c  
   P1:
     long_name: diatoms
     model: ersem/primary_producer
@@ -148,7 +128,7 @@ instances:
       N4n: N4/n # ammonium (mmol N/m^3)
       N5s: N5/s # silicate (mmol Si/m^3)
       O2o: O2/o # oxygen (mmol O_2/m^3)
-      O3c: B_C/DIC # carbon dioxide (mmol C/m^3)
+      O3c: O3/c # carbon dioxide (mmol C/m^3)
   P2:
     long_name: nanophytoplankton
     model: ersem/primary_producer
@@ -200,7 +180,7 @@ instances:
       R1n: R1/n                                           # dissolved organic nitrogen (mmol N/m^3)
       R2c: R2/c                                           # semi-labile dissolved organic carbon (mg C/m^3)
       O2o: O2/o # oxygen (mmol O_2/m^3)
-      O3c: B_C/DIC                                        # carbon dioxide (mmol C/m^3)
+      O3c: O3/c                                           # carbon dioxide (mmol C/m^3)
   P3:
     long_name: picophytoplankton
     model: ersem/primary_producer
@@ -251,7 +231,7 @@ instances:
       R1n: R1/n                                           # dissolved organic nitrogen (mmol N/m^3)
       R2c: R2/c                                           # semi-labile dissolved organic carbon (mg C/m^3)
       O2o: O2/o # oxygen (mmol O_2/m^3)
-      O3c: B_C/DIC                                        # carbon dioxide (mmol C/m^3)
+      O3c: O3/c                                           # carbon dioxide (mmol C/m^3)
   P4:
     long_name: microphytoplankton
     model: ersem/primary_producer
@@ -302,7 +282,7 @@ instances:
       N3n: N3/n # nitrate (mmol N/m^3)
       N4n: N4/n # ammonium (mmol N/m^3)
       O2o: O2/o # oxygen (mmol O_2/m^3)
-      O3c: B_C/DIC # carbon dioxide (mmol C/m^3)
+      O3c: O3/c # carbon dioxide (mmol C/m^3)
   Z4:
     long_name: mesozooplankton
     model: ersem/mesozooplankton
@@ -361,7 +341,7 @@ instances:
       R1n: R1/n                                           # dissolved organic nitrogen (mmol N/m^3)
       R2c: R2/c                                           # semi-labile dissolved organic carbon (mg C/m^3)
       O2o: O2/o # oxygen (mmol O_2/m^3)
-      O3c: B_C/DIC                                        # carbon dioxide sink (mmol C/m^3)
+      O3c: O3/c                                           # carbon dioxide sink (mmol C/m^3)
   Z5:
     long_name: microzooplankton
     model: ersem/microzooplankton
@@ -415,7 +395,7 @@ instances:
       R1n: R1/n # dissolved organic nitrogen (mmol N/m^3)
       R2c: R2/c # semi-labile dissolved organic carbon (mg C/m^3)
       O2o: O2/o # oxygen (mmol O_2/m^3)
-      O3c: B_C/DIC # carbon dioxide (mmol C/m^3)
+      O3c: O3/c  # carbon dioxide (mmol C/m^3)
   Z6:
     long_name: nanoflagellates
     model: ersem/microzooplankton
@@ -463,7 +443,7 @@ instances:
       R1n: R1/n                                           # dissolved organic nitrogen (mmol N/m^3)
       R2c: R2/c                                           # semi-labile dissolved organic carbon (mg C/m^3)
       O2o: O2/o # oxygen (mmol O_2/m^3)
-      O3c: B_C/DIC                                        # carbon dioxide sink (mmol C/m^3)    
+      O3c: O3/c                                           # carbon dioxide sink (mmol C/m^3)    
   R1:
     long_name: labile dissolved organic matter
     model: ersem/pelagic_base
@@ -577,7 +557,7 @@ instances:
       R1n: R1/n                                           # labile dissolved organic nitrogen (mmol N/m^3)
       R2c: R2/c                                           # semi-labile dissolved organic carbon (mg C/m^3)
       R3c: R3/c                                           # semi-refractory DOC (mg C/m^3)
-      O3c: B_C/DIC                                        # carbon dioxide sink (mmol C/m^3)    
+      O3c: O3/c                                           # carbon dioxide sink (mmol C/m^3)    
       O2o: O2/o                                           # oxygen (mmol O_2/m^3)
   pel_nit:
     long_name: pelagic nitrification
