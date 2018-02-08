@@ -15,6 +15,10 @@ initialization:
   snow_thickness: snowthick
   ice_surface_temperature: icesurft
   shortwave_radiation: par # it must be PAR
+  #--PAR----------------------------------------------------------------------
+  background_attenuation: 0.04
+  silt_attenuation: 4e-05
+  silt_concentration: 1
   #---------------------------------------------------------------------------
   width_bbl: 0.5
   resolution_bbl: 0.1
