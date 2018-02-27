@@ -1,5 +1,5 @@
 initialization:
-  fabm_yaml_name: fabm_ersem.yaml
+  fabm_yaml_name: fabm_brom_ersem.yaml
   input_file_name: ROMS_Laptev_Sea.nc
   initialization_since_year: 1948
   longitude: 74.00
@@ -27,15 +27,15 @@ initialization:
   ice_layers_resolution: 0.06
   #-------------Boundary-conditions-------------------------------------------
   #-------------TheNameOfParameter: InstancesName_InitializationName-or-none--
-  Alk: none
-  DIC: none
+  Alk: B_C_Alk
+  DIC: B_C_DIC
   PO4: N1_p
   NO3: N3_n
   Si: N5_s
   #-------------IPBM-needs-to-know-for-bioturbation-calculations--------------
   O2: O2_o
   #-------------Solid-elements------------------------------------------------
-  CaCO3: L2_c
+  CaCO3: B_Ca_CaCO3
   #-------------Solid-elements-from-BROM--------------------------------------
   S0: none
   Fe3: none
