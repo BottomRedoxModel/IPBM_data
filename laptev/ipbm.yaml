@@ -53,9 +53,11 @@ initialization:
   SmallPOM: R4
   MediumPOM: R6
   LargePOM: R8
+  iDiatoms: P1_i
   Diatoms: P1
   NanoPhy: P2
   PicoPhy: P3
   MicroPhy: P4
-
-
+  MesoZoo: Z4
+  MicroZoo: Z5
+  NanoFlag: Z6
