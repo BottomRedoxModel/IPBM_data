@@ -4,7 +4,7 @@ initialization:
   initialization_since_year: 1948
   longitude: 74.00
   latitude: 74.00
-  #---------------------------------------------------------------------------
+  #-------------------------------------------------------------------------
   depth_on_boundary: depth2
   time: time
   temperature: temp
@@ -15,28 +15,31 @@ initialization:
   snow_thickness: snow_thick
   ice_surface_temperature: tisrf
   shortwave_radiation: swrad # it must be par
-  #--PAR----------------------------------------------------------------------
+  #-------------------------------------------------------------------------
+  required_volume: 0.072 # brine cells volume to enable convection in ice
+  ice_algae_velocity: 3 # cm per day
+  #--PAR--------------------------------------------------------------------
   background_attenuation: 0.04
   silt_attenuation: 4e-05
   silt_concentration: 1
-  #---------------------------------------------------------------------------
+  #-------------------------------------------------------------------------
   width_bbl: 0.5
   resolution_bbl: 0.1
   width_sediments: 0.1
   resolution_sediments: 0.02
   ice_layers_resolution: 0.06
-  #-------------Boundary-conditions-------------------------------------------
-  #-------------TheNameOfParameter: InstancesName_InitializationName-or-none--
+  #-----------Boundary-conditions-------------------------------------------
+  #-----------TheNameOfParameter: InstancesName_InitializationName-or-none--
   Alk: B_C_Alk
   DIC: B_C_DIC
   PO4: N1_p
   NO3: N3_n
   Si: N5_s
-  #-------------IPBM-needs-to-know-for-bioturbation-calculations--------------
+  #-----------IPBM-needs-to-know-for-bioturbation-calculations--------------
   O2: O2_o
-  #-------------Solid-elements------------------------------------------------
+  #-----------Solid-elements------------------------------------------------
   CaCO3: B_Ca_CaCO3
-  #-------------Solid-elements-from-BROM--------------------------------------
+  #-----------Solid-elements-from-BROM--------------------------------------
   S0: none
   Fe3: none
   FeCO3: none
@@ -48,8 +51,8 @@ initialization:
   Sipart: none
   Phy: none
   PON: none
-  #-------------Solid-elements-from-ERSEM-------------------------------------
-  #-------------TheNameOfParameter: InstancesName-or-none---------------------
+  #-----------Solid-elements-from-ERSEM-------------------------------------
+  #-----------TheNameOfParameter: InstancesName-or-none---------------------
   SmallPOM: R4
   MediumPOM: R6
   LargePOM: R8
