@@ -91,7 +91,7 @@ instances:
     model: ersem/primary_producer
     parameters:
       sum: 1.210                                          # maximum specific productivity at reference temperature (1/d)
-      q10: 1.9                                            # Q_10 temperature coefficient (-)
+      q10: 2.0                                            # Q_10 temperature coefficient (-)
       srs: 0.04                                           # specific rest respiration at reference temperature (1/d)
       pu_ea: 0.3                                          # excreted fraction of primary production (-)
       pu_ra: 0.2                                          # respired fraction of primary production (-)
@@ -111,7 +111,7 @@ instances:
       sdo: 0.05                                           # 1.1 of minimal specific lysis rate (1/d)
       alpha: 5.98                                         # initial slope of PI-curve (mg C m^2/mg Chl/W/d)
       beta: 0.2                                           # photoinhibition parameter (mg C m^2/mg Chl/W/d)
-      phim: 0.05                                          # maximum effective chlorophyll to carbon photosynthesis ratio (mg Chl/mg C)
+      phim: 0.06                                          # maximum effective chlorophyll to carbon photosynthesis ratio (mg Chl/mg C)
       Limnut: 1                                           # nitrogen-phosphorus colimitation formulation (0: geometric mean, 1: minimum, 2: harmonic mean)
       docdyn: true                                        # use dynamic ratio of labile to semi-labile DOM production, default = false
       uB1c_O2: 0.11                                       # oxygen produced per unit of carbon fixed (mmol O_2/mg C)
@@ -166,7 +166,7 @@ instances:
       sdo: 0.05                                           # 1.1 of minimal specific lysis rate (1/d)
       alpha: 4.0                                          # initial slope of PI-curve (mg C m^2/mg Chl/W/d)
       beta: 0.07                                          # photoinhibition parameter (mg C m^2/mg Chl/W/d)
-      phim: 0.05                                          # maximum effective chlorophyll to carbon photosynthesis ratio (mg Chl/mg C)
+      phim: 0.06                                          # maximum effective chlorophyll to carbon photosynthesis ratio (mg Chl/mg C)
       Limnut: 1                                           # nitrogen-phosphorus colimitation formulation (0: geometric mean, 1: minimum, 2: harmonic mean)
       docdyn: true                                        # use dynamic ratio of labile to semi-labile DOM production, default = false
       uB1c_O2: 0.11                                       # oxygen produced per unit of carbon fixed (mmol O_2/mg C)
