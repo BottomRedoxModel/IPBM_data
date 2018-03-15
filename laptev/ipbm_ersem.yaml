@@ -1,5 +1,5 @@
 initialization:
-  fabm_yaml_name: fabm_brom_ersem.yaml
+  fabm_yaml_name: fabm_ersem.yaml
   input_file_name: ROMS_Laptev_Sea.nc
   initialization_since_year: 1948
   longitude: 74.00
