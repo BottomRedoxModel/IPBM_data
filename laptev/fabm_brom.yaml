@@ -8,9 +8,9 @@ instances:
     initialization:
       NH4: 0.0
       NO2: 0.0
-      NO3: 5.0
+      NO3: 1.0
       PO4: 1.0
-      Si:  0.0
+      Si:  1.0
 #----------------------------------------------------------------------
   B_EQ:
 #----------------------------------------------------------------------
@@ -97,7 +97,7 @@ instances:
       K_phy_gro: 4. #3. #4.7
         # Maximum specific growth rate (1/d) = 0.9-1.3 (Savchuk, 2002), 
         # = 3.(Gregoire, Lacroix, 2001) >!0.5 worked for Berre! 
-      Iopt: 25.      
+      Iopt: 5.      
         # Optimal irradiance (W/m2) =50 (Savchuk, 2002)
       K_phy_mrt: 0.10 
         # Specific rate of mortality, (1/d) = 0.3-0.6 (Savchuk, 2002), = 0.05 (Gregoire, Lacroix, 2001)   
@@ -243,6 +243,7 @@ instances:
       PON: B_BIO/PON
       NH4: B_NUT/NH4
       NO3: B_NUT/NO3
+      PO4: B_NUT/PO4
       SO4: B_S/SO4
 #----------------------------------------------------------------------
   B_S:
@@ -425,7 +426,7 @@ instances:
     long_name: silicon
     model: niva/brom_silicon
     initialization:
-      Sipart: 0.0
+      Sipart: 1.0
     coupling:
       Si: B_NUT/Si
     parameters:
