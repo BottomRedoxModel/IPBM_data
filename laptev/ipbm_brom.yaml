@@ -17,8 +17,8 @@
   ice_surface_temperature: tisrf
   shortwave_radiation: swrad # it must be par
   #-------------------------------------------------------------------------
-  required_volume: 0.072 # brine cells volume to enable convection in ice
-  ice_algae_velocity: 3 # cm per day
+  required_volume: 0.12 # brine cells volume to enable convection in ice
+  ice_algae_velocity: 0 # cm per day
   #--PAR--------------------------------------------------------------------
   background_attenuation: 0.04
   silt_attenuation: 4e-05
