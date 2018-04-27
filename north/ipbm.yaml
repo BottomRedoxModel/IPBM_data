@@ -1,10 +1,11 @@
+  #-----------TheNameOfParameter: InstancesName_InitializationName-or-none--                                                                            
 initialization:
-  fabm_yaml_name: fabm_ersem.yaml
-  input_file_name: North_sea_36.nc
+  fabm_yaml_name: fabm_brom.yaml
+  input_file_name: Wadden_sea.nc
   initialization_since_year: 2015
   longitude: 6.63
   latitude: 54.29
-  #---------------------------------------------------------------------------
+  #-------------------------------------------------------------------------
   depth_on_boundary: levelface
   time: time
   temperature: temperature
@@ -15,47 +16,50 @@ initialization:
   snow_thickness: snowthick
   ice_surface_temperature: icesurft
   shortwave_radiation: par # it must be PAR
-  #--PAR----------------------------------------------------------------------
+  #-------------------------------------------------------------------------
+  required_volume: 0.12 # brine cells volume to enable convection in ice
+  ice_algae_velocity: 0 # cm per day
+  #--PAR--------------------------------------------------------------------
   background_attenuation: 0.04
   silt_attenuation: 4e-05
   silt_concentration: 1
-  #---------------------------------------------------------------------------
-  width_bbl: 0.5
-  resolution_bbl: 0.1
+  #-------------------------------------------------------------------------
+  width_bbl: 0.2
+  resolution_bbl: 0.04
   width_sediments: 0.1
   resolution_sediments: 0.02
   ice_layers_resolution: 0.06
-  #-------------Boundary-conditions-------------------------------------------
-  #-------------TheNameOfParameter: InstancesName_InitializationName-or-none--
-  Alk: none
-  DIC: none
-  PO4: N1_p
-  NO3: N3_n
-  Si: N5_s
-  #-------------IPBM-needs-to-know-for-bioturbation-calculations--------------
-  O2: O2_o
-  #-------------Solid-elements------------------------------------------------
-  CaCO3: L2_c
-  #-------------Solid-elements-from-BROM--------------------------------------
-  S0: none
-  Fe3: none
-  FeCO3: none
-  FeS: none
-  FeS2: none
-  Mn4: none
-  MnCO3: none
-  MnS: none
-  Sipart: none
-  Phy: none
-  PON: none
-  #-------------Solid-elements-from-ERSEM-------------------------------------
-  #-------------TheNameOfParameter: InstancesName-or-none---------------------
-  SmallPOM: R4
-  MediumPOM: R6
-  LargePOM: R8
-  Diatoms: P1
-  NanoPhy: P2
-  PicoPhy: P3
-  MicroPhy: P4
-
-
+  #-----------Boundary-conditions-------------------------------------------                                                                              
+  Alk: B_C_Alk
+  DIC: B_C_DIC
+  PO4: B_NUT_PO4
+  NO3: B_NUT_NO3
+  Si: B_NUT_Si
+  #-----------IPBM-needs-to-know-for-bioturbation-calculations--------------
+  O2: B_BIO_O2
+  #-----------Solid-elements------------------------------------------------
+  CaCO3: B_Ca_CaCO3
+  #-----------Solid-elements-from-BROM--------------------------------------
+  S0: B_S_S0
+  Fe3: B_Fe_Fe3
+  FeCO3: B_Fe_FeCO3
+  FeS: B_Fe_FeS
+  FeS2: B_Fe_FeS2
+  Mn4: B_Mn_Mn4
+  MnCO3: B_Mn_MnCO3
+  MnS: B_Mn_MnS
+  Sipart: B_Si_Sipart
+  Phy: B_BIO_Phy
+  PON: B_BIO_POML
+  #-----------Solid-elements-from-ERSEM-------------------------------------
+  SmallPOM: none
+  MediumPOM: none
+  LargePOM: none
+  iDiatoms: none
+  Diatoms: none
+  NanoPhy: none
+  PicoPhy: none
+  MicroPhy: none
+  MesoZoo: none
+  MicroZoo: none
+  NanoFlag: none 
