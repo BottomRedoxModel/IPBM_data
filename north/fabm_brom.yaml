@@ -94,7 +94,7 @@ instances:
       Baan:   B_BACT/Baan
       Bhan:   B_BACT/Bhan
     parameters:
-      K_phy_gro: 4. #3. #4.7
+      K_phy_gro: 4.7 #3. #4.7
         # Maximum specific growth rate (1/d) = 0.9-1.3 (Savchuk, 2002), 
         # = 3.(Gregoire, Lacroix, 2001) >!0.5 worked for Berre! 
       Iopt: 75.      
@@ -288,7 +288,7 @@ instances:
     long_name: iron
     model: niva/brom_fe
     initialization:
-      Fe2:    0.5
+      Fe2:    0.1
       Fe3:    0.0
       FeS:    0.0
       FeCO3:  0.0
@@ -362,7 +362,7 @@ instances:
     long_name: manganese
     model: niva/brom_manganese
     initialization:
-      Mn2:    0.5
+      Mn2:    0.1
       Mn3:    0.0
       Mn4:    0.0
       MnS:    0.0
