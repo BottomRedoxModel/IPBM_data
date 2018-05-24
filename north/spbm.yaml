@@ -50,7 +50,8 @@ initialization:
   MnS: B_Mn_MnS
   Sipart: B_Si_Sipart
   Phy: B_BIO_Phy
-  PON: B_BIO_PON
+  POML: B_BIO_POML
+  POMR: B_BIO_POMR
   #-----------Solid-elements-from-ERSEM-------------------------------------
   SmallPOM: none
   MediumPOM: none
