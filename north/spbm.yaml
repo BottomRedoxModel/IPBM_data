@@ -1,4 +1,3 @@
-  #-----------TheNameOfParameter: InstancesName_InitializationName-or-none--                                                                            
 initialization:
   fabm_yaml_name: fabm_brom.yaml
   input_file_name: Wadden_sea.nc
