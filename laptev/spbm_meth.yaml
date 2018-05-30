@@ -16,7 +16,14 @@ initialization:
   ice_surface_temperature: tisrf
   shortwave_radiation: swrad # it must be par
   #-names-for-relaxation----------------------------------------------------
+  relaxation_file_name: ROMS_Laptev_Sea.nc
+  relaxation_parameter: 1
+  DICrel: DIC
+  Alkrel: Alk
+  PO4rel: po4
   NO3rel: no3
+  Sirel: Si
+  O2rel: o2
   #-------------------------------------------------------------------------
   required_volume: 0.072 # brine cells volume to enable convection in ice
   ice_algae_velocity: 3 # cm per day
