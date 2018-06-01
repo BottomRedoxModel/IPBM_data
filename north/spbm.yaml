@@ -4,7 +4,7 @@ initialization:
   initialization_since_year: 2015
   longitude: 6.63
   latitude: 54.29
-  #-------------------------------------------------------------------------
+  #-names-of-parameters-in-the-input-file-----------------------------------
   depth_on_boundary: levelface
   time: time
   temperature: temperature
@@ -15,20 +15,29 @@ initialization:
   snow_thickness: snowthick
   ice_surface_temperature: icesurft
   shortwave_radiation: par # it must be PAR
-  #-------------------------------------------------------------------------
-  required_volume: 0.12 # brine cells volume to enable convection in ice
-  ice_algae_velocity: 0 # cm per day
-  #--PAR--------------------------------------------------------------------
+  #-names-for-relaxation----------------------------------------------------
+  relaxation_file_name: Wadden_sea.nc
+  relaxation_parameter: 0.5
+  DICrel: none
+  Alkrel: none
+  PO4rel: none
+  NO3rel: none
+  Sirel: none
+  O2rel: none
+  #-ice-parameters----------------------------------------------------------
+  required_volume: 0.072 # brine cells volume to enable convection in ice
+  ice_algae_velocity: 3 # cm per day
+  #-PAR---------------------------------------------------------------------
   background_attenuation: 0.04
   silt_attenuation: 4e-05
   silt_concentration: 1
-  #-------------------------------------------------------------------------
+  #-sediments-parameters----------------------------------------------------
   width_bbl: 0.2
   resolution_bbl: 0.04
   width_sediments: 0.1
   resolution_sediments: 0.02
   ice_layers_resolution: 0.06
-  #-----------Boundary-conditions-------------------------------------------                                                                              
+  #-SPBM-needs-to-know-some-variable-names-(according-to-fabm.yaml)---------
   Alk: B_C_Alk
   DIC: B_C_DIC
   PO4: B_NUT_PO4
