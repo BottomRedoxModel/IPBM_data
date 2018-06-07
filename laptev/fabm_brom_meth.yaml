@@ -1,7 +1,3 @@
-# This is .YAML file for BROM biogoechemical model.
-# Please don't write more than 72 symbols in one line, 
-# never use "TAB" and simplify your life by adding references !
-#----------------------------------------------------------------------
 check_conservation: false
 require_initialization: true
 instances:
@@ -107,9 +103,9 @@ instances:
       K_phy_gro: 2.9 #3.0 #2.7 # 4.5 #3. #4.7
         # Maximum specific growth rate (1/d) = 0.9-1.3 (Savchuk, 2002), 
         # = 3.(Gregoire, Lacroix, 2001) >!0.5 worked for Berre! 
-      Iopt: 75.      
+      Iopt: 25.      
         # Optimal irradiance (W/m2) =50 (Savchuk, 2002)
-      phy_t_dependence: 3   # select dependence of Phy growth rate on temperature:
+      phy_t_dependence: 2   # select dependence of Phy growth rate on temperature:
                             # (1) ERGOM); (2) for Arctic; (3) ERSEM
       K_phy_mrt: 0.15 
         # Specific rate of mortality, (1/d) = 0.3-0.6 (Savchuk, 2002), = 0.05 (Gregoire, Lacroix, 2001)   

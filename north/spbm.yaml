@@ -1,6 +1,6 @@
 initialization:
   fabm_yaml_name: fabm_brom.yaml
-  input_file_name: Wadden_sea.nc
+  input_file_name: wadden_sea_out.nc
   initialization_since_year: 2015
   longitude: 6.63
   latitude: 54.29
@@ -15,15 +15,22 @@ initialization:
   snow_thickness: snowthick
   ice_surface_temperature: icesurft
   shortwave_radiation: par # it must be PAR
+  #-some-configuration-parameters-------------------------------------------
+  repeat_day: 1
+  repeat_year: 1
+  seconds_per_circle: 300
+  is_par: 1 # is par or not, 1 is yes (0 is shortwave radiation)
   #-names-for-relaxation----------------------------------------------------
-  relaxation_file_name: Wadden_sea.nc
+  relaxation_file_name: wadden_sea_out.nc
   relaxation_parameter: 0.5
   DICrel: none
   Alkrel: none
-  PO4rel: none
-  NO3rel: none
-  Sirel: none
-  O2rel: none
+  PO4rel: phosphate
+  NO3rel: nitrate
+  Sirel: silicate
+  O2rel: oxygen
+  #-names-for-fluxes--------------------------------------------------------
+  CH4flux: none
   #-ice-parameters----------------------------------------------------------
   required_volume: 0.072 # brine cells volume to enable convection in ice
   ice_algae_velocity: 3 # cm per day
@@ -38,11 +45,13 @@ initialization:
   resolution_sediments: 0.02
   ice_layers_resolution: 0.06
   #-SPBM-needs-to-know-some-variable-names-(according-to-fabm.yaml)---------
+  #-----------TheNameOfParameter: InstancesName_InitializationName-or-none--
   Alk: B_C_Alk
   DIC: B_C_DIC
   PO4: B_NUT_PO4
   NO3: B_NUT_NO3
   Si: B_NUT_Si
+  CH4: B_CH4_CH4
   #-----------IPBM-needs-to-know-for-bioturbation-calculations--------------
   O2: B_BIO_O2
   #-----------Solid-elements------------------------------------------------
