@@ -29,6 +29,7 @@ initialization:
   NO3rel: nitrate
   Sirel: silicate
   O2rel: oxygen
+  CH4rel: none
   #-names-for-fluxes--------------------------------------------------------
   CH4flux: none
   DONflux: donflux
@@ -53,7 +54,7 @@ initialization:
   NO3: B_NUT_NO3
   Si: B_NUT_Si
   CH4: B_CH4_CH4
-  DON: B_BIO_DOML
+  DON: B_BIO_DOMR
   #-----------IPBM-needs-to-know-for-bioturbation-calculations--------------
   O2: B_BIO_O2
   #-----------Solid-elements------------------------------------------------

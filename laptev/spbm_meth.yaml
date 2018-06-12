@@ -29,8 +29,10 @@ initialization:
   NO3rel: no3
   Sirel: Si
   O2rel: o2
+  CH4rel: none
   #-names-for-fluxes--------------------------------------------------------
   CH4flux: B1f
+  DONflux: none
   #-ice-parameters----------------------------------------------------------
   required_volume: 0.072 # brine cells volume to enable convection in ice
   ice_algae_velocity: 3 # cm per day
@@ -52,6 +54,7 @@ initialization:
   NO3: B_NUT_NO3
   Si: B_NUT_Si
   CH4: B_CH4_CH4
+  DON: none
   #-----------IPBM-needs-to-know-for-bioturbation-calculations--------------
   O2: B_BIO_O2
   #-----------Solid-elements------------------------------------------------
