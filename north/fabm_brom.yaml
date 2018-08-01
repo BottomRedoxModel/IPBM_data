@@ -87,16 +87,16 @@ instances:
       Bhan:   B_BACT/Bhan
     parameters: #(Gregoire, Lacroix, 2001) (Savchuk, 2002) (Alldredge, Gotschalk, 1988)
                             # Phytoplankton
-      Iopt: 35.             # Optimal irradiance 
-      q10: 2.5              # for a temperature limiter
-      treference: 10        # for a temperature limiter
+      Iopt: 33.5            # Optimal irradiance 
+      q10: 1.1              # for a temperature limiter
+      treference: 14        # for a temperature limiter
       K_po4_lim: 0.012      # Half-sat. constant for uptake of PO4 by Phy
       K_si_lim: 0.5         # Half-sat. constant for uptake of Si_lim by Phy
       K_nox_lim: 0.1        # Half-sat.const. for uptake of NO3+NO2
       K_nh4_lim: 0.02       # Half-sat.const. for uptake of NH4
       K_nfix: 0.4           # Maximum specific rate of N-fixation
       K_psi: 1.46           # Strength of NH4 inhibition of NO3 uptake constant (uM-1)
-      K_phy_gro: 2.9        # Phytoplankton growth rate
+      K_phy_gro: 2.7        # Phytoplankton growth rate
       K_phy_mrt: 0.15       # Specific rate of mortality
       K_phy_exc: 0.10       # Specific rate of excretion
                             # Heterotrophs

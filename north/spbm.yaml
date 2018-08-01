@@ -32,7 +32,10 @@ initialization:
   CH4rel: none
   #-names-for-fluxes--------------------------------------------------------
   CH4flux: none
-  DONflux: donflux
+  DOMLflux: none
+  DOMRflux: none
+  POMLflux: none
+  POMRflux: none
   #-ice-parameters----------------------------------------------------------
   required_volume: 0.072 # brine cells volume to enable convection in ice
   ice_algae_velocity: 3 # cm per day
@@ -54,7 +57,8 @@ initialization:
   NO3: B_NUT_NO3
   Si: B_NUT_Si
   CH4: B_CH4_CH4
-  DON: B_BIO_DOMR
+  DOML: B_BIO_DOML
+  DOMR: B_BIO_DOMR
   #-----------IPBM-needs-to-know-for-bioturbation-calculations--------------
   O2: B_BIO_O2
   #-----------Solid-elements------------------------------------------------
