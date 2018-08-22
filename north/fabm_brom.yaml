@@ -85,25 +85,22 @@ instances:
       Bhae:   B_BACT/Bhae
       Baan:   B_BACT/Baan
       Bhan:   B_BACT/Bhan
-    parameters: #(Gregoire, Lacroix, 2001) (Savchuk, 2002) (Alldredge, Gotschalk, 1988)
+    parameters:
                             # Phytoplankton
-      Iopt: 33.5            # Optimal irradiance 
-      q10: 1.1              # for a temperature limiter
-      treference: 14        # for a temperature limiter
+      alpha: 0.05           # Photosynthetic efficiecy at low irradiance
+      pbm: 8.0              # Maximum hourly rate of phytosynthesis
       K_po4_lim: 0.012      # Half-sat. constant for uptake of PO4 by Phy
       K_si_lim: 0.5         # Half-sat. constant for uptake of Si_lim by Phy
       K_nox_lim: 0.1        # Half-sat.const. for uptake of NO3+NO2
       K_nh4_lim: 0.02       # Half-sat.const. for uptake of NH4
       K_nfix: 0.4           # Maximum specific rate of N-fixation
-      K_psi: 1.46           # Strength of NH4 inhibition of NO3 uptake constant (uM-1)
-      K_phy_gro: 2.7        # Phytoplankton growth rate
       K_phy_mrt: 0.15       # Specific rate of mortality
       K_phy_exc: 0.10       # Specific rate of excretion
                             # Heterotrophs
       K_het_phy_gro: 1.2    # Max.spec. rate of grazing of Zoo on Phy (1/d)
-      K_het_phy_lim: 0.5    # Half-sat.const.for grazing of Zoo on Phy for Phy/Zoo ratio
-      K_het_pom_gro: 0.5    # Max.spec.rate of grazing of Zoo on POP (detritus) (1/d)
-      K_het_pom_lim: 0.05   # Half-sat.const.for grazing of Zoo on POP for POP/Zoo ratio
+      K_het_phy_lim: 0.5    # Half-sat.const. on Phy for Phy/Zoo ratio
+      K_het_pom_gro: 0.5    # Max.spec.rate  on POP (detritus) (1/d)
+      K_het_pom_lim: 0.05   # Half-sat.const. on POP for POP/Zoo ratio
       K_het_bac_gro: 0.8    # Max.spec.rate of grazing of Zoo on bacteria (1/d)
       limGrazBac:  2.       # Limiting parameter for bacteria grazing by Zoo
       K_het_res: 0.10       # Specific respiration rate
@@ -117,8 +114,7 @@ instances:
       K_POMR_ox: 0.002      # Specific rate of oxidation of POMR with O2
       K_DOML_ox: 0.10       # Specific rate of oxidation of DOML with O2
       K_DOMR_ox: 0.10       # Specific rate of oxidation of DOMR with O2
-      beta_da: 20           # Temperature contral coefficient for OM decay
-      Tda: 13               # Temperature contral coefficient for OM decay
+      tda: 13               # Temperature contral coefficient for OM decay
       K_omox_o2: 1.         # half sat. of o2 for OM mineralization
                             # Other parameters
       Wsed: 7.0             # Rate of sinking of detritus (m/d) (1-370) 
