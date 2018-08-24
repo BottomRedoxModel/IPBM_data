@@ -27,11 +27,11 @@ instances:
     long_name: main_nutrients
     model: niva/brom_main_nutrients
     initialization:
-      NH4: 0.0
-      NO2: 0.0
-      NO3: 0.0
-      PO4: 0.0
-      Si:  0.0
+      NH4: 1.0
+      NO2: 1.0
+      NO3: 5.0
+      PO4: 1.0
+      Si:  5.0
   B_C:
     long_name: carbon
     model: niva/brom_carbon
@@ -73,12 +73,10 @@ instances:
       K_phy_mrt: 0.15       # Specific rate of mortality
       K_phy_exc: 0.10       # Specific rate of excretion
       # Heterotrophs
-      K_het_phy_gro: 1.2    # Max.spec. rate of grazing of Zoo on Phy (1/d)
+      K_het_phy_gro: 0.5    # Max.spec. rate of grazing of Zoo on Phy (1/d)
       K_het_phy_lim: 0.5    # Half-sat.const. on Phy for Phy/Zoo ratio
       K_het_pom_gro: 0.5    # Max.spec.rate  on POP (detritus) (1/d)
-      K_het_pom_lim: 0.05   # Half-sat.const. on POP for POP/Zoo ratio
-      K_het_bac_gro: 0.8    # Max.spec.rate of grazing of Zoo on bacteria (1/d)
-      limGrazBac:  2.       # Limiting parameter for bacteria grazing by Zoo
+      K_het_pom_lim: 0.5    # Half-sat.const. on POP for POP/Zoo ratio
       K_het_res: 0.10       # Specific respiration rate
       K_het_mrt: 0.15       # Maximum specific rate of mortality of Zoo (1/d)
       Uz: 0.5               # Food absorbency for Zoo(Het)
