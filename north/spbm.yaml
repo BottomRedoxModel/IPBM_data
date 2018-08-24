@@ -16,8 +16,8 @@ initialization:
   ice_surface_temperature: icesurft
   shortwave_radiation: par # it must be PAR
   #-some-configuration-parameters-------------------------------------------
-  repeat_day: 1
-  repeat_year: 1
+  repeat_day: 0
+  repeat_year: 0
   seconds_per_circle: 300
   is_par: 1 # is par or not, 1 is yes (0 is shortwave radiation)
   #-names-for-relaxation----------------------------------------------------
@@ -56,23 +56,23 @@ initialization:
   PO4: B_NUT_PO4
   NO3: B_NUT_NO3
   Si: B_NUT_Si
-  CH4: B_CH4_CH4
+  CH4: none
   DOML: B_BIO_DOML
   DOMR: B_BIO_DOMR
   #-----------IPBM-needs-to-know-for-bioturbation-calculations--------------
   O2: B_BIO_O2
   #-----------Solid-elements------------------------------------------------
-  CaCO3: B_Ca_CaCO3
+  CaCO3: none
   #-----------Solid-elements-from-BROM--------------------------------------
-  S0: B_S_S0
-  Fe3: B_Fe_Fe3
-  FeCO3: B_Fe_FeCO3
-  FeS: B_Fe_FeS
-  FeS2: B_Fe_FeS2
-  Mn4: B_Mn_Mn4
-  MnCO3: B_Mn_MnCO3
-  MnS: B_Mn_MnS
-  Sipart: B_Si_Sipart
+  S0: none
+  Fe3: none
+  FeCO3: none
+  FeS: none
+  FeS2: none
+  Mn4: none
+  MnCO3: none
+  MnS: none
+  Sipart: none
   Phy: B_BIO_Phy
   POML: B_BIO_POML
   POMR: B_BIO_POMR
