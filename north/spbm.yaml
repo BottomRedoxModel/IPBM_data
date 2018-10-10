@@ -1,7 +1,7 @@
 initialization:
   fabm_yaml_name: fabm_brom.yaml
   input_file_name: wadden_sea_out.nc
-  initialization_since_year: 2015
+  initialization_since_year: 2010
   longitude: 6.63
   latitude: 54.29
   #-names-of-parameters-in-the-input-file-----------------------------------
@@ -22,7 +22,7 @@ initialization:
   is_par: 1 # is par or not, 1 is yes (0 is shortwave radiation)
   #-names-for-relaxation----------------------------------------------------
   relaxation_file_name: wadden_sea_out.nc
-  relaxation_parameter: 0.5
+  relaxation_parameter: 0.1
   DICrel: none
   Alkrel: none
   PO4rel: phosphate
