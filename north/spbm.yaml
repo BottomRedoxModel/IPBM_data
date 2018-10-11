@@ -2,8 +2,7 @@ initialization:
   fabm_yaml_name: fabm_brom.yaml
   input_file_name: wadden_sea_out.nc
   initialization_since_year: 2010
-  longitude: 6.63
-  latitude: 54.29
+  latitude: 54.88
   #-names-of-parameters-in-the-input-file-----------------------------------
   depth_on_boundary: levelface
   time: time
@@ -40,9 +39,9 @@ initialization:
   required_volume: 0.072 # brine cells volume to enable convection in ice
   ice_algae_velocity: 3 # cm per day
   #-PAR---------------------------------------------------------------------
-  background_attenuation: 0.04
+  background_attenuation: 0
   silt_attenuation: 4e-05
-  silt_concentration: 1
+  silt_concentration: 0
   #-sediments-parameters----------------------------------------------------
   width_bbl: 0.2
   resolution_bbl: 0.04
