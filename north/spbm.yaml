@@ -15,19 +15,19 @@ initialization:
   ice_surface_temperature: icesurft
   shortwave_radiation: par # it must be PAR
   #-some-configuration-parameters-------------------------------------------
-  repeat_day: 0
-  repeat_year: 0
+  repeat_day: 100
+  repeat_year: 10
   seconds_per_circle: 300
   is_par: 1 # is par or not, 1 is yes (0 is shortwave radiation)
   #-names-for-relaxation----------------------------------------------------
   relaxation_file_name: wadden_sea_out.nc
-  relaxation_parameter: 0.1
+  relaxation_parameter: 1e-4
   DICrel: none
   Alkrel: none
   PO4rel: phosphate
   NO3rel: nitrate
   Sirel: silicate
-  O2rel: oxygen
+  O2rel: none
   CH4rel: none
   #-names-for-fluxes--------------------------------------------------------
   CH4flux: none
