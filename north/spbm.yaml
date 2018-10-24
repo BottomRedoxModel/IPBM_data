@@ -15,7 +15,7 @@ initialization:
   ice_surface_temperature: icesurft
   shortwave_radiation: par # it must be PAR
   #-some-configuration-parameters-------------------------------------------
-  repeat_day: 100
+  repeat_day: 10
   repeat_year: 10
   seconds_per_circle: 300
   is_par: 1 # is par or not, 1 is yes (0 is shortwave radiation)
@@ -25,9 +25,9 @@ initialization:
   #-names-for-relaxation-(how-they-are-called-in-the-relaxation-file)-------
   DICrel: none
   Alkrel: none
-  PO4rel: phosphate
-  NO3rel: nitrate
-  Sirel: silicate
+  PO4rel: none #phosphate
+  NO3rel: none #nitrate
+  Sirel: none #silicate
   O2rel: none
   CH4rel: none
   #-names-for-fluxes-(names-from-the-relaxation-file)-----------------------

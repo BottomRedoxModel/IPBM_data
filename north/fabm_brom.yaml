@@ -20,6 +20,7 @@ instances:
       Kw:       B_EQ/Kw
       tot_free: B_EQ/tot_free
       DIC:      B_C/DIC
+      Alk:      B_C/Alk
       PO4:      B_NUT/PO4
       Si:       B_NUT/Si
       NH4:      B_NUT/NH4
@@ -61,6 +62,7 @@ instances:
       NO2:    B_NUT/NO2
       NO3:    B_NUT/NO3
       DIC:    B_C/DIC
+      Alk:    B_C/Alk
     parameters:
       # Phytoplankton
       alpha: 0.024          # Photosynthetic efficiecy at low irradiance
@@ -101,10 +103,29 @@ instances:
       NH4: B_NUT/NH4
       NO2: B_NUT/NO2
       NO3: B_NUT/NO3
+      PO4: B_NUT/PO4
+      Si:  B_NUT/Si
+      DIC: B_C/DIC
+      Alk: B_C/Alk
       O2:  B_BIO/O2
+      POML: B_BIO/POML
+      DOML: B_BIO/DOML
+      POMR: B_BIO/POMR
+      DOMR: B_BIO/DOMR
     parameters:
       K_nitrif1: 0.1 # Spec.rate of 1st st. of nitrification
-      K_nitrif2: 0.1 # Spec.rate of 2d st. of nitrification
+      K_nitrif2: 0.1 # Spec.rate of 2nd st. of nitrification
       K_annamox: 0.8 # Spec.rate of Anammox (1/d) (Gregoire, Lacroix, 2001)
-      O2s_nf: 5. # Threshold of O2 saturation for nitrification (uM)
-      O2s_dn: 10.0 # Threshold of O2 for denitrification, anammox, Mn reduction (uM O2)
+      O2s_nf: 5. # Threshold of O2 saturation for nitrification (uM O2)
+      O2s_dn: 10.0 # Threshold of O2 for denitrification, anammox (uM O2)
+      s_OM_refr:  20.0 # Threshold of refractory OM for decay
+      K_omno_no3: 0.1 # Half-saturation of NO3 for OM denitrification
+      K_POML_NO3: 0.0025 # Spec.rate of 1st stage of denitrification
+      K_DOML_NO3: 0.0025 # Spec.rate of 1st stage of denitrification
+      K_POMR_NO3: 0.000125 # Spec.rate of 1st stage of denitrification
+      K_DOMR_NO3: 0.000125 # Spec.rate of 1st stage of denitrification
+      K_omno_no2: 0.1 # Half-saturation of NO2 for OM denitrification
+      K_POML_NO2: 0.0025 # Spec.rate of 2nd stage of denitrification
+      K_DOML_NO2: 0.0025 # Spec.rate of 2nd stage of denitrification
+      K_POMR_NO2: 0.000125 # Spec.rate of 2nd stage of denitrification
+      K_DOMR_NO2: 0.000125 # Spec.rate of 2nd stage of denitrification
