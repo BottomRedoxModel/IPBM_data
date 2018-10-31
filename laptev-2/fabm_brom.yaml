@@ -166,3 +166,40 @@ instances:
       K_DOML_so4: 0.1
       K_POMR_so4: 0.002
       K_DOMR_so4: 0.1
+  B_CH4:
+    long_name: methane
+    model: niva/brom_methane
+    parameters:
+      s_omso_o2: 25.0
+         # threshold of o2 for OM sulfate reduction
+      s_omso_no3: 5.0
+         # threshold of noX for OM sulfate reduction
+      s_omch_so4: 30.
+         # Threshold of of SO4 for methane production from OM
+      K_DOML_ch4: 0.00014
+         # Specific rate of methane production from DON (Lopes et al., 2011)
+      K_POML_ch4: 0.00014
+         # Specific rate of methane production from POML
+      K_POMR_ch4: 0.000014
+         # Specific rate of methane production from POMR
+      K_DOMR_ch4: 0.000014
+         # Specific rate of methane production from DOMR
+      K_ch4_o2: 0.001
+         # Specific rate of oxidation of CH4 with O2
+      K_ch4_so4: 0.0000274
+         # Specific rate of oxidation of CH4 with SO4
+      s_OM_refr: 10.0   # threshold of refractory OM for decay
+    initialization:
+      CH4: 0.0 
+    coupling:
+      DIC: B_C/DIC
+      O2:  B_BIO/O2
+      DOML: B_BIO/DOML
+      DOMR: B_BIO/DOMR
+      POML: B_BIO/POML
+      POMR: B_BIO/POMR
+      NO3: B_NUT/NO3
+      PO4: B_NUT/PO4
+      Si: B_NUT/Si
+      NH4: B_NUT/NH4
+      SO4: B_S/SO4
