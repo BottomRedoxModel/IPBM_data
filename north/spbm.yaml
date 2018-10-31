@@ -15,13 +15,13 @@ initialization:
   ice_surface_temperature: icesurft
   shortwave_radiation: par # it must be PAR
   #-some-configuration-parameters-------------------------------------------
-  repeat_day: 10
+  repeat_day: 100
   repeat_year: 10
   seconds_per_circle: 300
   is_par: 1 # is par or not, 1 is yes (0 is shortwave radiation)
   #-name-of-relaxation-file-------------------------------------------------
   relaxation_file_name: wadden_sea_out.nc
-  relaxation_parameter: 1e-5
+  relaxation_parameter: 1e-4
   #-names-for-relaxation-(how-they-are-called-in-the-relaxation-file)-------
   PO4rel: phosphate
   NO3rel: nitrate
@@ -44,8 +44,8 @@ initialization:
   #-sediments-parameters----------------------------------------------------
   width_bbl: 0.2
   resolution_bbl: 0.04
-  width_sediments: 0.1
-  resolution_sediments: 0.02
+  width_sediments: 0.5
+  resolution_sediments: 0.05
   ice_layers_resolution: 0.06
   #-SPBM-needs-to-know-some-variable-names-(according-to-the-fabm.yaml)-----
   #-----------TheNameOfParameter: InstancesName_InitializationName-or-none--
