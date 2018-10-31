@@ -21,7 +21,7 @@ initialization:
   is_par: 1 # is par or not, 1 is yes (0 is shortwave radiation)
   #-name-of-relaxation-file-------------------------------------------------
   relaxation_file_name: wadden_sea_out.nc
-  relaxation_parameter: 1e-4
+  relaxation_parameter: 1e-5
   #-names-for-relaxation-(how-they-are-called-in-the-relaxation-file)-------
   PO4rel: phosphate
   NO3rel: nitrate
@@ -61,7 +61,7 @@ initialization:
   #-----------Solid-elements------------------------------------------------
   CaCO3: none
   #-----------Solid-elements-from-BROM--------------------------------------
-  S0: none
+  S0: B_S_S0
   Fe3: none
   FeCO3: none
   FeS: none

@@ -129,3 +129,40 @@ instances:
       K_DOML_NO2: 0.0025 # Spec.rate of 2nd stage of denitrification
       K_POMR_NO2: 0.000125 # Spec.rate of 2nd stage of denitrification
       K_DOMR_NO2: 0.000125 # Spec.rate of 2nd stage of denitrification
+  B_S:
+    long_name: sulfur_cycle
+    model: niva/brom_sulfur
+    initialization:
+      H2S:    0.0
+      S0:     0.0
+      S2O3:   0.0
+      SO4:    1000.
+    coupling:
+      NH4: B_NUT/NH4
+      NO3: B_NUT/NO3
+      PO4: B_NUT/PO4
+      Si:  B_NUT/Si
+      O2:  B_BIO/O2
+      DIC: B_C/DIC
+      Alk: B_C/Alk
+      DOML: B_BIO/DOML
+      DOMR: B_BIO/DOMR
+      POML: B_BIO/POML
+      POMR: B_BIO/POMR
+    parameters:
+      K_s0_disp:  0.001
+      K_hs_ox: 0.5
+      K_hs_no3: 0.8
+      K_s0_ox: 0.02
+      K_s0_no3: 0.9 # Specific rate of oxidation of S0 with NO3
+      K_s2o3_ox: 0.005
+      K_s2o3_no3: 0.01  # Specific rate of oxidation of S2O3 with NO3
+      s_omso_o2: 25.0
+      s_omso_no3: 5.0
+      K_omso_so4: 1 # Half-saturation of SO4 for OM sulfate reduction
+      O2_sr: 5 # Half-saturation of O2
+      NO3_sr: 1 # Half-saturation of NO3
+      K_POML_so4: 0.02
+      K_DOML_so4: 0.1
+      K_POMR_so4: 0.002
+      K_DOMR_so4: 0.1
