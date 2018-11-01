@@ -27,9 +27,9 @@ initialization:
   NO3rel: no3
   Sirel: Si
   O2rel: o2
-  CH4rel: none
+  CH4rel: Slb
   #-names-for-fluxes--------------------------------------------------------
-  CH4flux: none 
+  CH4flux: B1f
   DOMLflux: none
   DOMRflux: none
   POMLflux: none
