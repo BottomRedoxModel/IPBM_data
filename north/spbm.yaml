@@ -16,7 +16,7 @@ initialization:
   shortwave_radiation: par # it must be PAR
   #-some-configuration-parameters-------------------------------------------
   repeat_day: 100
-  repeat_year: 10
+  repeat_year: 50
   seconds_per_circle: 300
   is_par: 1 # is par or not, 1 is yes (0 is shortwave radiation)
   #-name-of-relaxation-file-------------------------------------------------
