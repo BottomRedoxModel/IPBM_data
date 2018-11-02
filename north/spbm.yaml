@@ -33,7 +33,7 @@ initialization:
   DOMLflux: none
   DOMRflux: none
   POMLflux: none
-  POMRflux: none
+  POMRflux: om_flux
   #-ice-parameters----------------------------------------------------------
   required_volume: 0.072 # brine cells volume to enable convection in ice
   ice_algae_velocity: 3 # cm per day
@@ -46,6 +46,8 @@ initialization:
   resolution_bbl: 0.04
   width_sediments: 0.5
   resolution_sediments: 0.05
+  dispersion_coefficient: 1e-8
+  #-ice-parameters----------------------------------------------------------
   ice_layers_resolution: 0.06
   #-SPBM-needs-to-know-some-variable-names-(according-to-the-fabm.yaml)-----
   #-----------TheNameOfParameter: InstancesName_InitializationName-or-none--

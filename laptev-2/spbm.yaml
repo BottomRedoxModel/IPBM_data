@@ -46,6 +46,8 @@ initialization:
   resolution_bbl: 0.1
   width_sediments: 0.1
   resolution_sediments: 0.02
+  dispersion_coefficient: 0
+  #-ice-parameters----------------------------------------------------------
   ice_layers_resolution: 0.03
   #-SPBM-needs-to-know-some-variable-names-(according-to-fabm.yaml)---------
   #-----------TheNameOfParameter: InstancesName_InitializationName-or-none--
