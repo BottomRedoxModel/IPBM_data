@@ -118,7 +118,6 @@ instances:
       K_annamox: 0.8 # Spec.rate of Anammox (1/d) (Gregoire, Lacroix, 2001)
       O2s_nf: 5. # Threshold of O2 saturation for nitrification (uM O2)
       O2s_dn: 10.0 # Threshold of O2 for denitrification, anammox (uM O2)
-      s_OM_refr:  20.0 # Threshold of refractory OM for decay
       K_omno_no3: 0.1 # Half-saturation of NO3 for OM denitrification
       K_POML_NO3: 0.0025 # Spec.rate of 1st stage of denitrification
       K_DOML_NO3: 0.0025 # Spec.rate of 1st stage of denitrification
