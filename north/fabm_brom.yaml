@@ -119,15 +119,15 @@ instances:
       O2s_nf: 5. # Threshold of O2 saturation for nitrification (uM O2)
       O2s_dn: 10.0 # Threshold of O2 for denitrification, anammox (uM O2)
       K_omno_no3: 0.1 # Half-saturation of NO3 for OM denitrification
-      K_POML_NO3: 0.0025 # Spec.rate of 1st stage of denitrification
-      K_DOML_NO3: 0.0025 # Spec.rate of 1st stage of denitrification
-      K_POMR_NO3: 0.000125 # Spec.rate of 1st stage of denitrification
-      K_DOMR_NO3: 0.000125 # Spec.rate of 1st stage of denitrification
+      K_POML_NO3: 0.005 # Spec.rate of 1st stage of denitrification
+      K_DOML_NO3: 0.025 # Spec.rate of 1st stage of denitrification
+      K_POMR_NO3: 0.0005 # Spec.rate of 1st stage of denitrification
+      K_DOMR_NO3: 0.025 # Spec.rate of 1st stage of denitrification
       K_omno_no2: 0.1 # Half-saturation of NO2 for OM denitrification
-      K_POML_NO2: 0.0025 # Spec.rate of 2nd stage of denitrification
-      K_DOML_NO2: 0.0025 # Spec.rate of 2nd stage of denitrification
-      K_POMR_NO2: 0.000125 # Spec.rate of 2nd stage of denitrification
-      K_DOMR_NO2: 0.000125 # Spec.rate of 2nd stage of denitrification
+      K_POML_NO2: 0.005 # Spec.rate of 2nd stage of denitrification
+      K_DOML_NO2: 0.025 # Spec.rate of 2nd stage of denitrification
+      K_POMR_NO2: 0.0005 # Spec.rate of 2nd stage of denitrification
+      K_DOMR_NO2: 0.025 # Spec.rate of 2nd stage of denitrification
   B_S:
     long_name: sulfur_cycle
     model: niva/brom_sulfur
@@ -161,7 +161,7 @@ instances:
       K_omso_so4: 1 # Half-saturation of SO4 for OM sulfate reduction
       O2_sr: 5 # Half-saturation of O2
       NO3_sr: 1 # Half-saturation of NO3
-      K_POML_so4: 0.02
-      K_DOML_so4: 0.1
-      K_POMR_so4: 0.002
-      K_DOMR_so4: 0.1
+      K_POML_so4: 0.002
+      K_DOML_so4: 0.01
+      K_POMR_so4: 0.0002
+      K_DOMR_so4: 0.01
