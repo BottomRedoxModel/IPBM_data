@@ -118,7 +118,6 @@ instances:
       K_annamox: 0.8 # Spec.rate of Anammox (1/d) (Gregoire, Lacroix, 2001)
       O2s_nf: 5. # Threshold of O2 saturation for nitrification (uM O2)
       O2s_dn: 10.0 # Threshold of O2 for denitrification, anammox (uM O2)
-      s_OM_refr:  20.0 # Threshold of refractory OM for decay
       K_omno_no3: 0.1 # Half-saturation of NO3 for OM denitrification
       K_POML_NO3: 0.0025 # Spec.rate of 1st stage of denitrification
       K_DOML_NO3: 0.0025 # Spec.rate of 1st stage of denitrification
@@ -203,3 +202,20 @@ instances:
       Si: B_NUT/Si
       NH4: B_NUT/NH4
       SO4: B_S/SO4
+  B_Ca:
+    long_name: calcium
+    model: niva/brom_calcium
+    initialization:
+      CaCO3: 5.0
+    coupling:
+      DIC: B_C/DIC
+      Alk: B_C/Alk
+      CO3: B_C/CO3
+    parameters:
+      K_caco3_diss: 3.0  
+        #! CaCO3 dissollution rate constant (1/d) (wide ranges 
+        #  are given in (Luff et al., 2001))
+      K_caco3_form: 0.0002  
+        #! CaCO3 precipitation rate constant (1/d) (wide ranges 
+        #  are given in (Luff et al., 2001))
+      Wsed: 7.0        #! Rate of sinking of detritus (m/d)

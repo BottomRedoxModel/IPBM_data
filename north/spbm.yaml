@@ -46,7 +46,7 @@ initialization:
   width_bbl: 0.2
   resolution_bbl: 0.05
   width_sediments: 0.4
-  resolution_sediments: 0.04
+  resolution_sediments: 0.02
   dispersion_coefficient: 5e-9
   #-ice-parameters----------------------------------------------------------
   ice_layers_resolution: 0.06
