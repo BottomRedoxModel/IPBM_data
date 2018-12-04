@@ -135,7 +135,7 @@ instances:
       H2S:    0.0
       S0:     0.0
       S2O3:   0.0
-      SO4:    1000.
+      SO4:    25000.
     coupling:
       NH4: B_NUT/NH4
       NO3: B_NUT/NO3
