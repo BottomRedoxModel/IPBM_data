@@ -43,11 +43,14 @@ initialization:
   silt_attenuation: 4e-05
   silt_concentration: 0
   #-sediments-parameters----------------------------------------------------
-  width_bbl: 0.2
+  width_bbl: 0.1
   resolution_bbl: 0.05
   width_sediments: 0.4
   resolution_sediments: 0.01
   dispersion_coefficient: 1e-9
+  max_porosity: 0.55
+  min_porosity: 0.45
+  burial_velocity: 0 #1e-10
   #-ice-parameters----------------------------------------------------------
   ice_layers_resolution: 0.06
   #-SPBM-needs-to-know-some-variable-names-(according-to-the-fabm.yaml)-----
