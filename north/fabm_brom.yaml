@@ -50,10 +50,10 @@ instances:
     initialization:
       Phy: 1.
       Het: 1.
-      POML: 1.
-      POMR: 1.
-      DOML: 0.0
-      DOMR: 0.0
+      POM: 1.
+      POC: 1.
+      DOM: 0.0
+      DOC: 0.0
       O2:  360.
     coupling:
       PO4:    B_NUT/PO4
@@ -84,12 +84,12 @@ instances:
       Uz: 0.5               # Food absorbency for Zoo(Het)
       Hz: 0.5               # Ratio betw. diss. and part. excretes of het.
       # Organic matter
-      K_POML_DOML: 0.15     # Specific rate of Autolysis of POML to DOML
-      K_POMR_DOMR: 0.00001  # Specific rate of Autolysis of POMR to DOMR
-      K_DOML_ox: 0.1        # Specific rate of oxidation of DOML with O2
-      K_DOMR_ox: 0.1        # Specific rate of oxidation of DOMR with O2
-      K_POML_ox: 0.02       # Specific rate of oxidation of POML with O2
-      K_POMR_ox: 0.002      # Specific rate of oxidation of POMR with O2
+      K_POM_DOM: 0.15     # Specific rate of Autolysis of POML to DOML
+      K_POC_DOC: 0.00001  # Specific rate of Autolysis of POMR to DOMR
+      K_DOM_ox: 0.1        # Specific rate of oxidation of DOML with O2
+      K_DOC_ox: 0.1        # Specific rate of oxidation of DOMR with O2
+      K_POM_ox: 0.02       # Specific rate of oxidation of POML with O2
+      K_POC_ox: 0.002      # Specific rate of oxidation of POMR with O2
       tref: 0.              # Reference temperature at which temperature factor = 1
       K_omox_o2: 1.         # half sat. of o2 for OM mineralization
       # Other parameters
@@ -108,10 +108,10 @@ instances:
       DIC: B_C/DIC
       Alk: B_C/Alk
       O2:  B_BIO/O2
-      POML: B_BIO/POML
-      DOML: B_BIO/DOML
-      POMR: B_BIO/POMR
-      DOMR: B_BIO/DOMR
+      POM: B_BIO/POM
+      DOM: B_BIO/DOM
+      POC: B_BIO/POC
+      DOC: B_BIO/DOC
     parameters:
       K_nitrif1: 0.1 # Spec.rate of 1st st. of nitrification
       K_nitrif2: 0.1 # Spec.rate of 2nd st. of nitrification
@@ -119,15 +119,15 @@ instances:
       O2s_nf: 5. # Threshold of O2 saturation for nitrification (uM O2)
       O2s_dn: 10.0 # Threshold of O2 for denitrification, anammox (uM O2)
       K_omno_no3: 0.1 # Half-saturation of NO3 for OM denitrification
-      K_DOML_NO3: 0.1 # Spec.rate of 1st stage of denitrification
-      K_DOMR_NO3: 0.1 # Spec.rate of 1st stage of denitrification
-      K_POML_NO3: 0.02 # Spec.rate of 1st stage of denitrification
-      K_POMR_NO3: 0.002 # Spec.rate of 1st stage of denitrification
+      K_DOM_NO3: 0.1 # Spec.rate of 1st stage of denitrification
+      K_DOC_NO3: 0.1 # Spec.rate of 1st stage of denitrification
+      K_POM_NO3: 0.02 # Spec.rate of 1st stage of denitrification
+      K_POC_NO3: 0.002 # Spec.rate of 1st stage of denitrification
       K_omno_no2: 0.1 # Half-saturation of NO2 for OM denitrification
-      K_DOML_NO2: 0.1 # Spec.rate of 2nd stage of denitrification
-      K_DOMR_NO2: 0.1 # Spec.rate of 2nd stage of denitrification
-      K_POML_NO2: 0.02 # Spec.rate of 2nd stage of denitrification
-      K_POMR_NO2: 0.002 # Spec.rate of 2nd stage of denitrification
+      K_DOM_NO2: 0.1 # Spec.rate of 2nd stage of denitrification
+      K_DOC_NO2: 0.1 # Spec.rate of 2nd stage of denitrification
+      K_POM_NO2: 0.02 # Spec.rate of 2nd stage of denitrification
+      K_POC_NO2: 0.002 # Spec.rate of 2nd stage of denitrification
   B_S:
     long_name: sulfur_cycle
     model: niva/brom_sulfur
@@ -144,10 +144,10 @@ instances:
       O2:  B_BIO/O2
       DIC: B_C/DIC
       Alk: B_C/Alk
-      DOML: B_BIO/DOML
-      DOMR: B_BIO/DOMR
-      POML: B_BIO/POML
-      POMR: B_BIO/POMR
+      DOM: B_BIO/DOM
+      DOC: B_BIO/DOC
+      POM: B_BIO/POM
+      POC: B_BIO/POC
     parameters:
       K_s0_disp:  0.001
       K_hs_ox: 0.5
@@ -161,7 +161,7 @@ instances:
       K_omso_so4: 1 # Half-saturation of SO4 for OM sulfate reduction
       O2_sr: 5 # Half-saturation of O2
       NO3_sr: 1 # Half-saturation of NO3
-      K_DOML_so4: 0.1
-      K_DOMR_so4: 0.1
-      K_POML_so4: 0.02
-      K_POMR_so4: 0.002
+      K_DOM_so4: 0.1
+      K_DOC_so4: 0.1
+      K_POM_so4: 0.02
+      K_POC_so4: 0.002

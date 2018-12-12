@@ -21,7 +21,7 @@ initialization:
   is_par: 1 # is par or not, 1 is yes (0 is shortwave radiation)
   #-name-of-relaxation-file-------------------------------------------------
   relaxation_file_name: wadden_sea_out.nc
-  relaxation_parameter: 1e-4
+  relaxation_parameter: 1e-3
   #-names-for-relaxation-(how-they-are-called-in-the-relaxation-file)-------
   DICrel: none
   PO4rel: phosphate
@@ -31,10 +31,10 @@ initialization:
   CH4rel: none
   #-names-for-fluxes-(names-from-the-relaxation-file)-----------------------
   CH4flux: none
-  DOMLflux: none
-  DOMRflux: none
-  POMLflux: om_flux
-  POMRflux: none
+  DOMflux: none
+  DOCflux: none
+  POMflux: om_flux
+  POCflux: none
   #-ice-parameters----------------------------------------------------------
   required_volume: 0.072 # brine cells volume to enable convection in ice
   ice_algae_velocity: 3 # cm per day
@@ -61,8 +61,8 @@ initialization:
   NO3: B_NUT_NO3
   Si: B_NUT_Si
   CH4: none
-  DOML: B_BIO_DOML
-  DOMR: B_BIO_DOMR
+  DOM: B_BIO_DOM
+  DOC: B_BIO_DOC
   #-----------IPBM-needs-to-know-for-bioturbation-calculations--------------
   O2: B_BIO_O2
   #-----------Solid-elements------------------------------------------------
@@ -79,8 +79,8 @@ initialization:
   Sipart: none
   Phy: B_BIO_Phy
   Het: B_BIO_Het
-  POML: B_BIO_POML
-  POMR: B_BIO_POMR
+  POM: B_BIO_POM
+  POC: B_BIO_POC
   #-----------Solid-elements-from-ERSEM-------------------------------------
   SmallPOM: none
   MediumPOM: none
