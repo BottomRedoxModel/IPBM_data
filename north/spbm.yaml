@@ -33,8 +33,8 @@ initialization:
   CH4flux: none
   DOMflux: none
   DOCflux: none
-  POMflux: om_flux
-  POCflux: none
+  POMflux: none
+  POCflux: om_flux
   #-ice-parameters----------------------------------------------------------
   required_volume: 0.072 # brine cells volume to enable convection in ice
   ice_algae_velocity: 3 # cm per day
@@ -47,9 +47,9 @@ initialization:
   resolution_bbl: 0.05
   width_sediments: 0.4
   resolution_sediments: 0.01
-  dispersion_coefficient: 1e-9
-  max_porosity: 0.55
-  min_porosity: 0.45
+  dispersion_coefficient: 1e-8
+  max_porosity: 0.75
+  min_porosity: 0.25
   burial_velocity: 0 #1e-10
   #-ice-parameters----------------------------------------------------------
   ice_layers_resolution: 0.06
