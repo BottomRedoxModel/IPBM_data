@@ -16,12 +16,12 @@ initialization:
   shortwave_radiation: par # it must be PAR
   #-some-configuration-parameters-------------------------------------------
   repeat_day: 100
-  repeat_year: 10
+  repeat_year: 20
   seconds_per_circle: 300
   is_par: 1 # is par or not, 1 is yes (0 is shortwave radiation)
   #-name-of-relaxation-file-------------------------------------------------
   relaxation_file_name: wadden_sea_out.nc
-  relaxation_parameter: 0.01
+  relaxation_parameter: 0.002
   #-names-for-relaxation-(how-they-are-called-in-the-relaxation-file)-------
   DICrel: none
   PO4rel: phosphate
