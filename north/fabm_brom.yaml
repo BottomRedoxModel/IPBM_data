@@ -85,12 +85,12 @@ instances:
       Hz: 0.5               # Ratio betw. diss. and part. excretes of het.
       # Organic matter
       K_POM_DOM: 0.15       # Specific rate of Autolysis of POM to DOM
-      K_POC_DOC: 0.00001    # Specific rate of Autolysis of POC to DOC
+      K_POC_DOC: 0          # Specific rate of Autolysis of POC to DOC
       K_DOM_ox: 0.1         # Hydrolysis of labile OM
       K_POM_ox: 0.01        # Hydrolysis of resuspended OM
       K_DOC_ox: 0.1         # Oxidation of labile OM
       K_POC_ox: 0.01        # Oxidation of resuspended OM
-      tref: 0.              # Reference temperature at which temperature factor = 1
+      tref: 2.              # Reference temperature at which temperature factor = 1
       K_omox_o2: 1.         # half sat. of o2 for OM mineralization
       # Other parameters
       Wsed: 5.0             # Rate of sinking of detritus (m/d) (1-370) 
