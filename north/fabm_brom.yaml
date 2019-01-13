@@ -165,3 +165,4 @@ instances:
       K_POM_so4: 0.01
       K_DOC_so4: 0.02
       K_POC_so4: 0.002
+      tref: 2. # Reference temperature at which temperature factor = 1

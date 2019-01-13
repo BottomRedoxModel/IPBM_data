@@ -47,7 +47,7 @@ initialization:
   resolution_bbl: 0.05
   width_sediments: 0.4
   resolution_sediments: 0.01
-  dispersion_coefficient: 2e-9
+  dispersion_coefficient: 1e-9
   max_porosity: 0.75
   min_porosity: 0.25
   burial_velocity: 0 #1e-10
