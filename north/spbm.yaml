@@ -25,6 +25,7 @@ initialization:
   #-names-for-relaxation-(how-they-are-called-in-the-relaxation-file)-------
   DICrel: none
   PO4rel: phosphate
+  NH4rel: ammonium
   NO3rel: nitrate
   Sirel: silicate
   O2rel: none
@@ -58,6 +59,7 @@ initialization:
   Alk: B_C_Alk
   DIC: B_C_DIC
   PO4: B_NUT_PO4
+  NH4: B_NUT_NH4
   NO3: B_NUT_NO3
   Si: B_NUT_Si
   CH4: none
