@@ -32,13 +32,13 @@ instances:
       NO2: 0.1
       NO3: 17.6
       PO4: 1.24
-      Si:  18. 
+      Si:  18.
   B_C:
     long_name: carbon
     model: niva/brom_carbon
     initialization:
       DIC: 2130.0 # total dissolved inorganic carbon (mmol C/m^3)
-      Alk: 2300.0 
+      Alk: 2300.0
     coupling:
       Kc0:   B_EQ/Kc0
       Kc1:   B_EQ/Kc1
@@ -86,16 +86,16 @@ instances:
       # Organic matter
       K_POM_DOM: 0.15       # Specific rate of Autolysis of POM to DOM
       K_POC_DOC: 0          # Specific rate of Autolysis of POC to DOC
-      K_DOM_ox: 0.1         # Hydrolysis of labile OM
-      K_POM_ox: 0.01        # Hydrolysis of resuspended OM
-      K_DOC_ox: 0.1         # Oxidation of labile OM
-      K_POC_ox: 0.01        # Oxidation of resuspended OM
+      K_DOM_ox: 0.2         # Hydrolysis of labile OM
+      K_POM_ox: 0.02        # Hydrolysis of resuspended OM
+      K_DOC_ox: 0.2         # Oxidation of labile OM
+      K_POC_ox: 0.02        # Oxidation of resuspended OM
       tref: 2.              # Reference temperature at which temperature factor = 1
       K_omox_o2: 1.         # half sat. of o2 for OM mineralization
       # Other parameters
-      Wsed: 5.0             # Rate of sinking of detritus (m/d) (1-370) 
+      Wsed: 2.0             # Rate of sinking of detritus (m/d) (1-370)
       Wphy: 0.1             # Rate of sinking of Phy (m/d), (0.1-0.5)
-      Whet: 1.              # Rate of sinking of Het (m/d)
+      Whet: 0.1             # Rate of sinking of Het (m/d)
   B_N:
     long_name: nitrogen_cycle
     model: niva/brom_nitrogen
@@ -119,15 +119,15 @@ instances:
       O2s_nf: 5.      # Threshold of O2 saturation for nitrification (uM O2)
       O2s_dn: 10.0    # Threshold of O2 for denitrification, anammox (uM O2)
       K_omno_no3: 0.1 # Half-saturation of NO3 for OM denitrification
-      K_DOM_NO3: 0.1
-      K_POM_NO3: 0.01
-      K_DOC_NO3: 0.075
-      K_POC_NO3: 0.0075
+      K_DOM_NO3: 0.2
+      K_POM_NO3: 0.02
+      K_DOC_NO3: 0.15
+      K_POC_NO3: 0.015
       K_omno_no2: 0.1 # Half-saturation of NO2 for OM denitrification
-      K_DOM_NO2: 0.1
-      K_POM_NO2: 0.01
-      K_DOC_NO2: 0.075
-      K_POC_NO2: 0.0075
+      K_DOM_NO2: 0.2
+      K_POM_NO2: 0.02
+      K_DOC_NO2: 0.15
+      K_POC_NO2: 0.015
   B_S:
     long_name: sulfur_cycle
     model: niva/brom_sulfur
@@ -161,8 +161,8 @@ instances:
       K_omso_so4: 1 # Half-saturation of SO4 for OM sulfate reduction
       O2_sr: 5 # Half-saturation of O2
       NO3_sr: 1 # Half-saturation of NO3
-      K_DOM_so4: 0.1
-      K_POM_so4: 0.01
-      K_DOC_so4: 0.02
-      K_POC_so4: 0.002
+      K_DOM_so4: 0.2
+      K_POM_so4: 0.02
+      K_DOC_so4: 0.04
+      K_POC_so4: 0.004
       tref: 2. # Reference temperature at which temperature factor = 1
