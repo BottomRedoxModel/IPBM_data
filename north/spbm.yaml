@@ -27,6 +27,7 @@ initialization:
   PO4rel: phosphate
   NH4rel: ammonium
   NO3rel: nitrate
+  SO4rel: sulfate
   Sirel: silicate
   O2rel: none
   CH4rel: none
@@ -61,6 +62,7 @@ initialization:
   PO4: B_NUT_PO4
   NH4: B_NUT_NH4
   NO3: B_NUT_NO3
+  SO4: B_S_SO4
   Si: B_NUT_Si
   CH4: none
   DOM: B_BIO_DOM
