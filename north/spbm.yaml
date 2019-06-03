@@ -1,8 +1,14 @@
 initialization:
+  #-------------------------------------------------------------------------
+  # --- a file name with a biogeochemical model configuration
   fabm_yaml_name: fabm_brom.yaml
+  # --- an input data file
   input_file_name: wadden_sea_out.nc
+  # --- to know where leap years are
   initialization_since_year: 2010
+  # --- to calculate radiation if necessary
   latitude: 54.88
+  #-------------------------------------------------------------------------
   #-names-of-parameters-in-the-input-file-----------------------------------
   depth_on_boundary: levelface
   time: time
@@ -13,12 +19,14 @@ initialization:
   ice_thickness: hice
   snow_thickness: snowthick
   ice_surface_temperature: icesurft
-  shortwave_radiation: par # it must be PAR
+  shortwave_radiation: par
+  #-------------------------------------------------------------------------
   #-some-configuration-parameters-------------------------------------------
   repeat_day: 100
   repeat_year: 20
   seconds_per_circle: 300
-  is_par: 1 # is par or not, 1 is yes (0 is shortwave radiation)
+  is_par: 1 # if sortwave_radiation is PAR put 1 (0 if shortwave radiation)
+  #-------------------------------------------------------------------------
   #-name-of-relaxation-file-------------------------------------------------
   relaxation_file_name: wadden_sea_out.nc
   relaxation_parameter: 0.054
@@ -27,7 +35,7 @@ initialization:
   PO4rel: phosphate
   NH4rel: ammonium
   NO3rel: nitrate
-  SO4rel: sulfate
+  SO4rel: none
   Sirel: silicate
   O2rel: none
   CH4rel: none
@@ -37,9 +45,11 @@ initialization:
   DOCflux: none
   POMflux: none
   POCflux: om_flux
+  #-------------------------------------------------------------------------
   #-ice-parameters----------------------------------------------------------
   required_volume: 0.072 # brine cells volume to enable convection in ice
   ice_algae_velocity: 3 # cm per day
+  ice_layers_resolution: 0.06
   #-PAR---------------------------------------------------------------------
   background_attenuation: 0.04
   silt_attenuation: 4e-05
@@ -53,8 +63,7 @@ initialization:
   max_porosity: 0.75
   min_porosity: 0.25
   burial_velocity: 0 #1e-10
-  #-ice-parameters----------------------------------------------------------
-  ice_layers_resolution: 0.06
+  #-------------------------------------------------------------------------
   #-SPBM-needs-to-know-some-variable-names-(according-to-the-fabm.yaml)-----
   #-----------TheNameOfParameter: InstancesName_InitializationName-or-none--
   Alk: B_C_Alk
