@@ -1,0 +1,108 @@
+initialization:
+  #-------------------------------------------------------------------------
+  # --- a file name with a biogeochemical model configuration
+  fabm_yaml_name: fabm_brom.yaml
+  # --- an input data file
+  input_file_name: north_sea_out.nc
+  # --- to know where leap years are
+  initialization_since_year: 2010
+  # --- to calculate radiation if necessary
+  latitude: 54.88
+  #-------------------------------------------------------------------------
+  #-names-of-parameters-in-the-input-file-----------------------------------
+  depth_on_boundary: levelface
+  time: time
+  temperature: temperature
+  salinity: salinity
+  density: sigma
+  eddy_diffusivity: turbulence
+  ice_thickness: hice
+  snow_thickness: snowthick
+  ice_surface_temperature: icesurft
+  shortwave_radiation: par
+  #-------------------------------------------------------------------------
+  #-some-configuration-parameters-------------------------------------------
+  repeat_day: 100
+  repeat_year: 20
+  seconds_per_circle: 300
+  is_par: 1 # if sortwave_radiation is PAR put 1 (0 if shortwave radiation)
+  #-------------------------------------------------------------------------
+  #-name-of-relaxation-file-------------------------------------------------
+  relaxation_file_name: north_sea_out.nc
+  relaxation_parameter: 0.054
+  #-names-for-relaxation-(how-they-are-called-in-the-relaxation-file)-------
+  DICrel: DIC
+  PO4rel: phosphate
+  NH4rel: none
+  NO3rel: nitrate
+  SO4rel: sulfate
+  Sirel: silicate
+  O2rel: oxygen
+  CH4rel: none
+  #-names-for-fluxes-(names-from-the-relaxation-file)-----------------------
+  CH4flux: none
+  DOMflux: none
+  DOCflux: none
+  POMflux: none
+  POCflux: none
+  #-------------------------------------------------------------------------
+  #-ice-parameters----------------------------------------------------------
+  required_volume: 0.072 # brine cells volume to enable convection in ice
+  ice_algae_velocity: 3 # cm per day
+  ice_layers_resolution: 0.06
+  #-PAR---------------------------------------------------------------------
+  background_attenuation: 0.04
+  silt_attenuation: 4e-05
+  silt_concentration: 6000
+  #-sediments-parameters----------------------------------------------------
+  width_bbl: 0.5
+  resolution_bbl: 0.05
+  width_sediments: 0.1
+  resolution_sediments: 0.05
+  dispersion_coefficient: 0
+  max_porosity: 0.75
+  min_porosity: 0.25
+  burial_velocity: 0 #1e-10
+  #-------------------------------------------------------------------------
+  #-SPBM-needs-to-know-some-variable-names-(according-to-the-fabm.yaml)-----
+  #-----------TheNameOfParameter: InstancesName_InitializationName-or-none--
+  Alk: B_C_Alk
+  DIC: B_C_DIC
+  PO4: B_NUT_PO4
+  NH4: B_NUT_NH4
+  NO3: B_NUT_NO3
+  SO4: B_S_SO4
+  Si: B_NUT_Si
+  CH4: none
+  DOM: B_BIO_DOM
+  DOC: B_BIO_DOC
+  #-----------IPBM-needs-to-know-for-bioturbation-calculations--------------
+  O2: B_BIO_O2
+  #-----------Solid-elements------------------------------------------------
+  CaCO3: none
+  #-----------Solid-elements-from-BROM--------------------------------------
+  S0: B_S_S0
+  Fe3: none
+  FeCO3: none
+  FeS: none
+  FeS2: none
+  Mn4: none
+  MnCO3: none
+  MnS: none
+  Sipart: none
+  Phy: B_BIO_Phy
+  Het: B_BIO_Het
+  POM: B_BIO_POM
+  POC: B_BIO_POC
+  #-----------Solid-elements-from-ERSEM-------------------------------------
+  SmallPOM: none
+  MediumPOM: none
+  LargePOM: none
+  iDiatoms: none
+  Diatoms: none
+  NanoPhy: none
+  PicoPhy: none
+  MicroPhy: none
+  MesoZoo: none
+  MicroZoo: none
+  NanoFlag: none
