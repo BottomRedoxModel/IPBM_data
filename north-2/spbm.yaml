@@ -29,7 +29,7 @@ initialization:
   #-------------------------------------------------------------------------
   #-name-of-relaxation-file-------------------------------------------------
   relaxation_file_name: north_sea_out.nc
-  relaxation_parameter: 1450 #horizontal diffusion coef, m^2 s^-1
+  relaxation_parameter: 145 #horizontal diffusion coef, m^2 s^-1
   dx: 10000 #horizontal distance, m
   #-names-for-relaxation-(how-they-are-called-in-the-relaxation-file)-------
   DICrel: DIC
