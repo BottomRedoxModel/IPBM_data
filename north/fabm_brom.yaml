@@ -51,9 +51,7 @@ instances:
       Phy: 1.
       Het: 1.
       POM: 1.
-      POC: 1.
       DOM: 0.0
-      DOC: 0.0
       O2:  360.
     coupling:
       PO4:    B_NUT/PO4
@@ -85,11 +83,8 @@ instances:
       Hz: 0.5               # Ratio betw. diss. and part. excretes of het.
       # Organic matter
       K_POM_DOM: 0.15       # Specific rate of Autolysis of POM to DOM
-      K_POC_DOC: 0          # Specific rate of Autolysis of POC to DOC
       K_DOM_ox: 0.2         # Hydrolysis of labile OM
       K_POM_ox: 0.02        # Hydrolysis of resuspended OM
-      K_DOC_ox: 0.2         # Oxidation of labile OM
-      K_POC_ox: 0.02        # Oxidation of resuspended OM
       tref: 2.              # Reference temperature at which temperature factor = 1
       K_omox_o2: 1.         # half sat. of o2 for OM mineralization
       # Other parameters
@@ -110,8 +105,6 @@ instances:
       O2:  B_BIO/O2
       POM: B_BIO/POM
       DOM: B_BIO/DOM
-      POC: B_BIO/POC
-      DOC: B_BIO/DOC
     parameters:
       K_nitrif1: 0.1  # Spec.rate of 1st st. of nitrification
       K_nitrif2: 0.1  # Spec.rate of 2nd st. of nitrification
@@ -121,13 +114,9 @@ instances:
       K_omno_no3: 0.1 # Half-saturation of NO3 for OM denitrification
       K_DOM_NO3: 0.2
       K_POM_NO3: 0.02
-      K_DOC_NO3: 0.15
-      K_POC_NO3: 0.015
       K_omno_no2: 0.1 # Half-saturation of NO2 for OM denitrification
       K_DOM_NO2: 0.2
       K_POM_NO2: 0.02
-      K_DOC_NO2: 0.15
-      K_POC_NO2: 0.015
   B_S:
     long_name: sulfur_cycle
     model: niva/brom_sulfur
@@ -145,9 +134,7 @@ instances:
       DIC: B_C/DIC
       Alk: B_C/Alk
       DOM: B_BIO/DOM
-      DOC: B_BIO/DOC
       POM: B_BIO/POM
-      POC: B_BIO/POC
     parameters:
       K_s0_disp:  0.001
       K_hs_ox: 0.5
@@ -163,6 +150,4 @@ instances:
       NO3_sr: 1 # Half-saturation of NO3
       K_DOM_so4: 0.2
       K_POM_so4: 0.02
-      K_DOC_so4: 0.04
-      K_POC_so4: 0.004
       tref: 2. # Reference temperature at which temperature factor = 1
