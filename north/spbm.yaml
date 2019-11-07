@@ -44,7 +44,7 @@ initialization:
   #-names-for-fluxes-(names-from-the-relaxation-file)-----------------------
   CH4flux: none
   DOMflux: none
-  POMflux: none
+  POMflux: om_flux
   Alkflux: none
   DICflux: none
   #-------------------------------------------------------------------------
@@ -61,7 +61,7 @@ initialization:
   resolution_bbl: 0.05
   width_sediments: 0.4
   resolution_sediments: 0.01
-  dispersion_coefficient: 10e-9
+  dispersion_coefficient: 35e-9
   max_porosity: 0.75
   min_porosity: 0.25
   burial_velocity: 0 #1e-10
