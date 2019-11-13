@@ -63,20 +63,20 @@ instances:
       Alk:    B_C/Alk
     parameters:
       # Phytoplankton
-      alpha: 0.055          # Photosynthetic efficiecy at low irradiance
-      pbm: 2.7              # Maximum hourly rate of phytosynthesis
-      K_po4_lim: 0.17       # Half-sat. constant for uptake of PO4 by Phy
-      K_si_lim: 0.07        # Half-sat. constant for uptake of Si_lim by Phy
-      K_nox_lim: 9.39       # Half-sat.const. for uptake of NO3+NO2
-      K_nh4_lim: 0.57       # Half-sat.const. for uptake of NH4
+      alpha: 0.086          # Photosynthetic efficiecy at low irradiance
+      pbm: 2.85             # Maximum hourly rate of phytosynthesis
+      K_po4_lim: 0.1        # Half-sat. constant for uptake of PO4 by Phy
+      K_si_lim: 0.1         # Half-sat. constant for uptake of Si_lim by Phy
+      K_nox_lim: 2.73       # Half-sat.const. for uptake of NO3+NO2
+      K_nh4_lim: 9.31       # Half-sat.const. for uptake of NH4
       K_nfix: 0.4           # Maximum specific rate of N-fixation
       K_phy_mrt: 0.000027   # Specific rate of mortality
       K_phy_exc: 0.015      # Specific rate of excretion
       # Heterotrophs
-      K_het_phy_gro: 0.136  # Max.spec. rate of grazing of Zoo on Phy (1/d)
-      K_het_phy_lim: 0.219  # Half-sat.const. on Phy for Phy/Zoo ratio
-      K_het_pom_gro: 0.136  # Max.spec.rate  on POP (detritus) (1/d)
-      K_het_pom_lim: 0.219  # Half-sat.const. on POP for POP/Zoo ratio
+      K_het_phy_gro: 0.2    # Max.spec. rate of grazing of Zoo on Phy (1/d)
+      K_het_phy_lim: 0.3    # Half-sat.const. on Phy for Phy/Zoo ratio
+      K_het_pom_gro: 0.2    # Max.spec.rate  on POP (detritus) (1/d)
+      K_het_pom_lim: 0.3    # Half-sat.const. on POP for POP/Zoo ratio
       K_het_res: 0.015      # Specific respiration rate
       K_het_mrt: 0.0225     # Maximum specific rate of mortality of Zoo (1/d)
       Uz: 0.5               # Food absorbency for Zoo(Het)
@@ -106,17 +106,17 @@ instances:
       POM: B_BIO/POM
       DOM: B_BIO/DOM
     parameters:
-      K_nitrif1: 0.1  # Spec.rate of 1st st. of nitrification
-      K_nitrif2: 0.1  # Spec.rate of 2nd st. of nitrification
+      K_nitrif1: 1    # Spec.rate of 1st st. of nitrification
+      K_nitrif2: 1    # Spec.rate of 2nd st. of nitrification
       K_annamox: 0.8  # Spec.rate of Anammox (1/d) (Gregoire, Lacroix, 2001)
       O2s_nf: 5.      # Threshold of O2 saturation for nitrification (uM O2)
       O2s_dn: 10.0    # Threshold of O2 for denitrification, anammox (uM O2)
       K_omno_no3: 0.1 # Half-saturation of NO3 for OM denitrification
-      K_DOM_NO3: 0.2
-      K_POM_NO3: 0.02
+      K_DOM_NO3: 0.15
+      K_POM_NO3: 0.015
       K_omno_no2: 0.1 # Half-saturation of NO2 for OM denitrification
-      K_DOM_NO2: 0.2
-      K_POM_NO2: 0.02
+      K_DOM_NO2: 0.15
+      K_POM_NO2: 0.015
   B_S:
     long_name: sulfur_cycle
     model: niva/brom_sulfur
@@ -148,6 +148,6 @@ instances:
       K_omso_so4: 1 # Half-saturation of SO4 for OM sulfate reduction
       O2_sr: 5 # Half-saturation of O2
       NO3_sr: 1 # Half-saturation of NO3
-      K_DOM_so4: 0.2
-      K_POM_so4: 0.02
+      K_DOM_so4: 0.04
+      K_POM_so4: 0.004
       tref: 2. # Reference temperature at which temperature factor = 1
