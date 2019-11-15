@@ -64,7 +64,7 @@ instances:
     parameters:
       # Phytoplankton
       alpha: 0.086          # Photosynthetic efficiecy at low irradiance
-      pbm: 2.85             # Maximum hourly rate of phytosynthesis
+      pbm: 2.43             # Maximum hourly rate of phytosynthesis
       K_po4_lim: 0.1        # Half-sat. constant for uptake of PO4 by Phy
       K_si_lim: 0.1         # Half-sat. constant for uptake of Si_lim by Phy
       K_nox_lim: 2.73       # Half-sat.const. for uptake of NO3+NO2
