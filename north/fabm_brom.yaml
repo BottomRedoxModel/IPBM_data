@@ -83,8 +83,8 @@ instances:
       Hz: 0.5               # Ratio betw. diss. and part. excretes of het.
       # Organic matter
       K_POM_DOM: 0.15       # Specific rate of Autolysis of POM to DOM
-      K_DOM_ox: 0.2         # Hydrolysis of labile OM
-      K_POM_ox: 0.02        # Hydrolysis of resuspended OM
+      K_DOM_ox: 0.1         # Oxydation of labile OM
+      K_POM_ox: 0.002       # Oxydation of resuspended OM
       tref: 2.              # Reference temperature at which temperature factor = 1
       K_omox_o2: 1.         # half sat. of o2 for OM mineralization
       # Other parameters
@@ -112,11 +112,11 @@ instances:
       O2s_nf: 5.      # Threshold of O2 saturation for nitrification (uM O2)
       O2s_dn: 10.0    # Threshold of O2 for denitrification, anammox (uM O2)
       K_omno_no3: 0.1 # Half-saturation of NO3 for OM denitrification
-      K_DOM_NO3: 0.15
-      K_POM_NO3: 0.015
+      K_DOM_NO3: 0.075
+      K_POM_NO3: 0.0015
       K_omno_no2: 0.1 # Half-saturation of NO2 for OM denitrification
-      K_DOM_NO2: 0.15
-      K_POM_NO2: 0.015
+      K_DOM_NO2: 0.075
+      K_POM_NO2: 0.0015
   B_S:
     long_name: sulfur_cycle
     model: niva/brom_sulfur
@@ -148,6 +148,6 @@ instances:
       K_omso_so4: 1 # Half-saturation of SO4 for OM sulfate reduction
       O2_sr: 5 # Half-saturation of O2
       NO3_sr: 1 # Half-saturation of NO3
-      K_DOM_so4: 0.04
-      K_POM_so4: 0.004
+      K_DOM_so4: 0.1
+      K_POM_so4: 0.002
       tref: 2. # Reference temperature at which temperature factor = 1
