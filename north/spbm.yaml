@@ -29,7 +29,7 @@ initialization:
   #-------------------------------------------------------------------------
   #-name-of-relaxation-file-------------------------------------------------
   relaxation_file_name: wadden_sea_out.nc
-  relaxation_parameter: 985
+  relaxation_parameter: 713
   dx: 10000
   #-names-for-relaxation-(how-they-are-called-in-the-relaxation-file)-------
   DICrel: none
