@@ -29,30 +29,28 @@ initialization:
   #-------------------------------------------------------------------------
   #-name-of-relaxation-file-------------------------------------------------
   relaxation_file_name: north_sea_out.nc
-  relaxation_parameter: 145 #horizontal diffusion coef, m^2 s^-1
-  dx: 10000 #horizontal distance, m
+  relaxation_parameter: 145  # horizontal diffusion coef, m^2 s^-1
+  dx: 10000  # horizontal distance, m
   #-names-for-relaxation-(how-they-are-called-in-the-relaxation-file)-------
-  DICrel: DIC
-  Alkrel: TA
+  DICrel: none  # DIC
+  Alkrel: none  # TA
   PO4rel: phosphate
   NH4rel: none
   NO3rel: nitrate
-  SO4rel: none #sulfate
+  SO4rel: none  # sulfate
   Sirel: silicate
-  O2rel: oxygen
+  O2rel: none  # oxygen
   CH4rel: none
   #-names-for-fluxes-(names-from-the-relaxation-file)-----------------------
   CH4flux: none
   DOMflux: none
-  DOCflux: none
   POMflux: none
-  POCflux: none
-  Alkflux: TA_in_eq
-  DICflux: DIC_in_eq
+  Alkflux: none  # TA_in_eq
+  DICflux: none  # DIC_in_eq
   #-------------------------------------------------------------------------
   #-ice-parameters----------------------------------------------------------
-  required_volume: 0.072 # brine cells volume to enable convection in ice
-  ice_algae_velocity: 3 # cm per day
+  required_volume: 0.072  # brine cells volume to enable convection in ice
+  ice_algae_velocity: 3  # cm per day
   ice_layers_resolution: 0.06
   #-PAR---------------------------------------------------------------------
   background_attenuation: 0.04
@@ -66,7 +64,7 @@ initialization:
   dispersion_coefficient: 0
   max_porosity: 0.75
   min_porosity: 0.25
-  burial_velocity: 0 #1e-10
+  burial_velocity: 0
   #-------------------------------------------------------------------------
   #-SPBM-needs-to-know-some-variable-names-(according-to-the-fabm.yaml)-----
   #-----------TheNameOfParameter: InstancesName_InitializationName-or-none--
@@ -79,7 +77,6 @@ initialization:
   Si: B_NUT_Si
   CH4: none
   DOM: B_BIO_DOM
-  DOC: B_BIO_DOC
   #-----------IPBM-needs-to-know-for-bioturbation-calculations--------------
   O2: B_BIO_O2
   #-----------Solid-elements------------------------------------------------
@@ -97,7 +94,6 @@ initialization:
   Phy: B_BIO_Phy
   Het: B_BIO_Het
   POM: B_BIO_POM
-  POC: B_BIO_POC
   #-----------Solid-elements-from-ERSEM-------------------------------------
   SmallPOM: none
   MediumPOM: none

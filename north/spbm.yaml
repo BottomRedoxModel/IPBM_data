@@ -49,8 +49,8 @@ initialization:
   DICflux: none
   #-------------------------------------------------------------------------
   #-ice-parameters----------------------------------------------------------
-  required_volume: 0.072 # brine cells volume to enable convection in ice
-  ice_algae_velocity: 3 # cm per day
+  required_volume: 0.072  # brine cells volume to enable convection in ice
+  ice_algae_velocity: 3  # cm per day
   ice_layers_resolution: 0.06
   #-PAR---------------------------------------------------------------------
   background_attenuation: 0.04
@@ -64,7 +64,7 @@ initialization:
   dispersion_coefficient: 10e-9
   max_porosity: 0.75
   min_porosity: 0.25
-  burial_velocity: 0 #1e-10
+  burial_velocity: 0
   #-------------------------------------------------------------------------
   #-SPBM-needs-to-know-some-variable-names-(according-to-the-fabm.yaml)-----
   #-----------TheNameOfParameter: InstancesName_InitializationName-or-none--
